@@ -1,0 +1,23 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Dependencies / build
+node_modules/
+.vercel
+
+# Working files — not part of the website
+temporary screenshots/
+screenshot.mjs
+ref.png
+ref2
+petpavilion.co.uk_grooming.png
+Грумінг бриф.txt
+CLAUDE.md
+GEMINI_IMAGE_GENERATION.md
+SKILL.md
+SKILL canvas.md
+README.md
+serve.mjs

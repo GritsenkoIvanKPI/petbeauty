@@ -1,0 +1,1077 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pet Beauty Grooming Studio — професійний грумінг собак і котів</title>
+<meta name="description" content="Pet Beauty Grooming Studio: модельні та гігієнічні стрижки, купання, вичісування, тримінг, SPA-догляд для собак і котів. Зручний онлайн-запис.">
+<meta name="theme-color" content="#FAF7F2">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:site_name" content="Pet Beauty Grooming Studio">
+<meta property="og:title" content="Pet Beauty Grooming Studio — професійний грумінг собак і котів">
+<meta property="og:description" content="Стрижки, купання, вичісування, тримінг та SPA-догляд для собак і котів. Зручний онлайн-запис.">
+<meta property="og:image" content="images/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="images/hero.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Brand: Tiffany */
+    --tiffany: #81D8D0;
+    --tiffany-soft: #CFEFEB;
+    --tiffany-mist: #EAF6F4;
+    --teal: #1F7A74;
+    --teal-hover: #186661;
+    --teal-deep: #135652;
+    --ink: #17302E;
+    --ink-2: #1F3B39;
+    /* Neutrals */
+    --ivory: #FAF7F2;
+    --cream: #F3EEE6;
+    --stone: #E9E2D6;
+    --sand: #DCD3C4;
+    --text: #263231;
+    --muted: #5E6967;
+    --white: #ffffff;
+    --error: #B03A4A;
+    --line: #8C8170;
+    /* Layout */
+    --header-h: 76px;
+    --rail: 1180px;
+    --gutter: 1.25rem;
+    --section-y: clamp(3.5rem, 2rem + 5vw, 6.5rem);
+    --space-2: .5rem; --space-3: .75rem; --space-4: 1rem; --space-6: 1.5rem; --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem; --space-16: 4rem;
+    --radius: 18px;
+    --radius-lg: 28px;
+    /* Type */
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Libre Franklin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    --h1: clamp(2.2rem, 1.3rem + 3.4vw, 4.1rem);
+    --h2: clamp(2.1rem, 1.5rem + 2.4vw, 3.4rem);
+    --h3: clamp(1.55rem, 1.35rem + .7vw, 1.95rem);
+    --text-body: clamp(1rem, .95rem + .2vw, 1.0625rem);
+    /* Depth */
+    --spring: cubic-bezier(.34, 1.56, .64, 1);
+    --ease-out: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    font-variant-numeric: lining-nums; font-feature-settings: 'lnum' 1;
+    font-family: var(--sans); font-size: var(--text-body); line-height: 1.7; color: var(--text);
+    background: var(--ivory); overflow-x: hidden; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: transparent;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button, input, select, textarea { font: inherit; color: inherit; }
+  ul { list-style: none; }
+  ::selection { background: var(--tiffany); color: var(--ink); }
+  [id] { scroll-margin-top: calc(var(--header-h) - 1px); }
+
+  /* Grain overlay */
+  body::after {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 100; opacity: .05; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .rail { width: 100%; max-width: calc(var(--rail) + var(--gutter) * 2); margin-inline: auto; padding-inline: var(--gutter); }
+  .section { padding-block: var(--section-y); position: relative; }
+
+  /* Typography */
+  h1, h2, h3, h4, .display, .h2, .h3 { text-wrap: balance; }
+  p, blockquote, .lead { text-wrap: pretty; }
+  li, small, figcaption, .price-name b, .stat span, .chip, label { text-wrap: balance; }
+  h1, h2, h3, h4, .display, .h2, .h3 { text-wrap: balance; }
+  p, blockquote, .lead { text-wrap: pretty; }
+  li, small, figcaption, .price-name b, .stat span, .chip, label { text-wrap: balance; }
+  .display { font-family: var(--serif); font-weight: 600; line-height: 1.02; letter-spacing: -0.03em; color: var(--ink); }
+  .h2 { font-family: var(--serif); font-weight: 600; font-size: var(--h2); line-height: 1.06; letter-spacing: -0.03em; color: var(--ink); }
+  .h3 { font-family: var(--serif); font-weight: 600; font-size: var(--h3); line-height: 1.12; letter-spacing: -0.015em; color: var(--ink); }
+  .lead { font-size: clamp(1.05rem, 1rem + .3vw, 1.2rem); color: var(--muted); line-height: 1.7; }
+  .muted { color: var(--muted); }
+
+  .section-head { text-align: center; max-width: 720px; margin: 0 auto var(--space-12); }
+  .section-head .lead { margin-top: var(--space-4); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    min-height: 52px; padding: .85rem 1.75rem; border-radius: 999px; border: 1px solid transparent;
+    font-size: .9375rem; font-weight: 500; letter-spacing: .01em; cursor: pointer; white-space: nowrap;
+    transition: transform .45s var(--spring), background-color .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; transition: transform .45s var(--spring); }
+  .btn:hover svg.arrow { transform: translateX(4px); }
+  .btn:hover { transform: translateY(-2px); }
+  .btn:active { transform: translateY(0) scale(.98); }
+  .btn:focus-visible, .focus-ring:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .btn-primary { background: var(--teal); color: var(--white); }
+  .btn-primary:hover { background: var(--teal-hover); }
+  .btn-primary:active { background: var(--teal-deep); }
+  .btn-outline { border-color: rgba(23,48,46,.62); color: var(--ink); background: rgba(255,255,255,.35); }
+  .btn-outline:hover { border-color: var(--ink); background: rgba(255,255,255,.75); }
+  .btn-outline:active { background: var(--white); }
+  .btn-light { background: var(--ivory); color: var(--ink); }
+  .btn-light:hover { background: var(--white); }
+  .btn-light:active { background: var(--tiffany-soft); }
+  .btn-light:focus-visible { outline-color: var(--tiffany); }
+  .btn-sm { min-height: 44px; padding: .6rem 1.25rem; font-size: .875rem; }
+  .btn-block { width: 100%; }
+
+  .link-u { position: relative; }
+  .link-u::after { content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .45s var(--ease-out); }
+  .link-u:hover::after, .link-u:focus-visible::after { transform: scaleX(1); }
+  .link-u:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; border-radius: 2px; }
+  .link-u:active { opacity: .7; }
+
+  /* Header */
+  .header { position: fixed; inset: 0 0 auto; z-index: 50; height: var(--header-h); border-bottom: 1px solid transparent; transition: background-color .35s ease; }
+  .header.is-scrolled { border-bottom-color: var(--stone); background: rgba(250,247,242,.86); backdrop-filter: blur(14px) saturate(1.2); -webkit-backdrop-filter: blur(14px) saturate(1.2); }
+  .header .rail { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--space-6); }
+  .logo { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; border-radius: 10px; }
+  .logo:focus-visible { outline: 2px solid var(--teal); outline-offset: 4px; }
+  .logo:active { opacity: .8; }
+  .logo-mark { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--tiffany); color: var(--ink); transition: transform .5s var(--spring); }
+  .logo:hover .logo-mark { transform: rotate(-12deg) scale(1.05); }
+  .logo-mark svg { width: 22px; height: 22px; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1; }
+  .logo-name { font-family: var(--serif); font-size: 1.55rem; font-weight: 600; letter-spacing: -0.02em; color: var(--ink); }
+  .logo-sub { font-size: .66rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--teal); margin-top: .3rem; }
+  .nav { display: none; gap: 2rem; }
+  .nav a { font-size: .9rem; font-weight: 500; color: var(--ink); padding-block: .4rem; }
+  .header-cta { display: none; }
+  .burger { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(23,48,46,.6); background: rgba(255,255,255,.5); display: grid; place-items: center; cursor: pointer; transition: transform .4s var(--spring), background-color .2s ease; }
+  .burger:hover { background: var(--white); }
+  .burger:active { transform: scale(.94); }
+  .burger:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .burger-lines { position: relative; display: block; width: 18px; height: 12px; }
+  .burger-lines > span { position: absolute; left: 0; width: 18px; height: 1.5px; border-radius: 2px; background: var(--ink); transition: transform .35s var(--ease-out), opacity .2s ease; }
+  .burger-lines > span:nth-child(1) { top: 0; }
+  .burger-lines > span:nth-child(2) { top: 5.25px; }
+  .burger-lines > span:nth-child(3) { top: 10.5px; }
+  .menu-open .burger-lines > span:nth-child(1) { transform: translateY(5.25px) rotate(45deg); }
+  .menu-open .burger-lines > span:nth-child(2) { opacity: 0; }
+  .menu-open .burger-lines > span:nth-child(3) { transform: translateY(-5.25px) rotate(-45deg); }
+  .mobile-menu { border-bottom: 1px solid var(--sand); position: fixed; inset: var(--header-h) 0 auto; z-index: 49; background: var(--ivory); padding: var(--space-6) var(--gutter) var(--space-8); border-radius: 0 0 var(--radius-lg) var(--radius-lg); opacity: 0; transform: translateY(-12px); pointer-events: none; transition: opacity .3s ease, transform .45s var(--ease-out); }
+  .menu-open .mobile-menu { opacity: 1; transform: none; pointer-events: auto; }
+  .menu-open .header { background: var(--ivory); }
+  .mobile-menu a:not(.btn) { display: block; padding: .8rem 0; font-family: var(--serif); font-size: 1.6rem; font-weight: 600; color: var(--ink); border-bottom: 1px solid var(--stone); }
+  .mobile-menu .btn { margin-top: var(--space-6); }
+  @media (min-width: 1024px) {
+    .nav { display: flex; }
+    .header-cta { display: inline-flex; }
+    .burger, .mobile-menu { display: none; }
+  }
+
+  /* Hero */
+  .hero { position: relative; min-height: min(100svh, 920px); display: flex; align-items: flex-end; padding: calc(var(--header-h) + 2rem) 0 var(--space-10); overflow: hidden; background: var(--cream); }
+  .hero-media { position: absolute; inset: 0; }
+  .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; transform: scale(1.06); animation: heroZoom 2.4s var(--ease-out) forwards; }
+  .hero-media::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .08; }
+  .hero-media::after { content: ""; position: absolute; inset: 0; z-index: 2;
+    background:
+      linear-gradient(0deg, rgba(250,247,242,.97) 0%, rgba(250,247,242,.88) 42%, rgba(250,247,242,.15) 72%, rgba(250,247,242,0) 100%); }
+  .hero-content { position: relative; z-index: 3; }
+  .hero h1 { font-size: var(--h1); max-width: 20ch; }
+  .hero .lead { margin-top: var(--space-6); max-width: 30ch; color: var(--text); }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+  .hero-feats { display: grid; grid-template-columns: 1fr; gap: var(--space-4); margin-top: var(--space-10); }
+  .hero-feat { display: flex; align-items: center; gap: .75rem; white-space: nowrap; font-size: .875rem; line-height: 1.35; color: var(--text); }
+  .icon-dot { width: 40px; height: 40px; flex: none; border-radius: 50%; display: grid; place-items: center; background: rgba(129,216,208,.35); color: var(--teal-deep); }
+  .icon-dot svg { width: 20px; height: 20px; }
+  @media (min-width: 640px) { .hero-feats { grid-template-columns: repeat(3, auto); justify-content: start; gap: var(--space-8); } }
+  @media (min-width: 900px) {
+    .hero { align-items: center; padding-bottom: var(--space-16); }
+    .hero-media::after { background:
+      radial-gradient(70% 90% at 10% 55%, rgba(250,247,242,.96) 0%, rgba(250,247,242,.82) 45%, rgba(250,247,242,0) 75%),
+      linear-gradient(90deg, rgba(250,247,242,.92) 0%, rgba(250,247,242,.6) 36%, rgba(250,247,242,0) 58%),
+      linear-gradient(0deg, rgba(23,48,46,.12) 0%, rgba(23,48,46,0) 30%); }
+  }
+  @media (max-width: 899px) {
+    .hero { flex-direction: column; align-items: stretch; min-height: 0; padding: 0 0 var(--space-12); background: var(--ivory); }
+    .hero-media { position: relative; inset: auto; height: clamp(320px, 62vw, 520px); margin-bottom: calc(var(--space-8) * -1); }
+    .hero-media img { object-position: 68% 40%; }
+    .hero-media::after { background: linear-gradient(0deg, var(--ivory) 0%, rgba(250,247,242,.6) 18%, rgba(250,247,242,0) 45%), linear-gradient(180deg, rgba(250,247,242,.7) 0%, rgba(250,247,242,0) 22%); }
+  }
+  @keyframes heroZoom { to { transform: scale(1); } }
+  .load-in { opacity: 0; transform: translateY(18px); animation: loadIn 1s var(--ease-out) forwards; }
+  .d1 { animation-delay: .1s; } .d2 { animation-delay: .22s; } .d3 { animation-delay: .34s; } .d4 { animation-delay: .46s; } .d5 { animation-delay: .6s; }
+  @keyframes loadIn { to { opacity: 1; transform: none; } }
+
+  /* Quick booking band */
+  .band-dark { background: var(--ink); color: rgba(250,247,242,.82); position: relative; overflow: hidden; isolation: isolate; }
+  .band-dark::before { content: ""; position: absolute; inset: 0; z-index: -1;
+    background: radial-gradient(50% 80% at 0% 0%, rgba(129,216,208,.16), transparent 70%), radial-gradient(40% 70% at 100% 100%, rgba(129,216,208,.12), transparent 70%), radial-gradient(30% 50% at 70% 10%, rgba(255,255,255,.04), transparent 70%); }
+  .band-dark .h2, .band-dark .h3 { color: var(--ivory); }
+  .band-dark .lead { color: rgba(250,247,242,.74); margin-top: var(--space-4); }
+  .quick-grid { display: grid; gap: var(--space-10); align-items: center; }
+  @media (min-width: 960px) { .quick-grid { grid-template-columns: 1fr 1.05fr; gap: var(--space-16); } }
+  .steps { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+  .step { display: flex; gap: var(--space-4); align-items: flex-start; }
+  .step-num { width: 40px; height: 40px; flex: none; border-radius: 50%; background: var(--tiffany); display: grid; place-items: center; font-family: var(--sans); font-size: 1rem; font-weight: 600; color: var(--ink); }
+  .step p > span { display: block; }
+  .step strong { display: block; color: var(--ivory); font-weight: 500; }
+  .step p > span { font-size: .9rem; color: rgba(250,247,242,.66); }
+  .glass { background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius-lg); padding: clamp(1.5rem, 1rem + 2vw, 2.5rem); backdrop-filter: blur(6px); }
+
+  /* Forms */
+  .field { display: flex; flex-direction: column; gap: .45rem; }
+  .label { font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+  .label .req { color: var(--teal); }
+  .input { width: 100%; min-height: 52px; padding: .8rem 1rem; border-radius: 12px; border: 1px solid var(--line); background: var(--white); color: var(--text); font-size: 1rem; transition: border-color .2s ease; appearance: none; -webkit-appearance: none; }
+  .input::placeholder { color: #69716F; opacity: 1; }
+  .input:hover { border-color: var(--teal); }
+  .input:focus { outline: 2px solid var(--teal); outline-offset: 1px; border-color: var(--teal); }
+  .input[aria-invalid="true"] { border-color: var(--error); border-width: 2px; }
+  select.input { padding-right: 2.75rem; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2317302E' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1.1rem center; cursor: pointer; }
+  textarea.input { min-height: 110px; resize: vertical; line-height: 1.55; }
+  .band-dark .label { color: rgba(250,247,242,.85); }
+  .band-dark .label .req { color: var(--tiffany); }
+  .band-dark .input { background-color: rgba(255,255,255,.06); border-color: rgba(255,255,255,.42); color: var(--ivory); }
+  .band-dark .input::placeholder { color: rgba(250,247,242,.66); }
+  .band-dark .input:hover { border-color: rgba(255,255,255,.65); }
+  .band-dark .input:focus { outline: 2px solid var(--tiffany); outline-offset: 1px; border-color: var(--tiffany); }
+  .band-dark select.input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2381D8D0' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E"); }
+  .band-dark select.input option { color: var(--text); }
+  .band-dark .btn-primary { background: var(--tiffany); color: var(--ink); }
+  .band-dark .btn-primary:hover { background: #95E0D9; }
+  .band-dark .btn-primary:active { background: #6CCBC2; }
+  .band-dark .btn-primary:focus-visible { outline-color: var(--tiffany); }
+  .form-grid { display: grid; gap: var(--space-4); }
+  .js-booking { display: grid; gap: var(--space-4); }
+  .js-booking .form-note { margin-top: 0; }
+  .glass .h3 { margin-bottom: -.5rem; }
+  fieldset { display: grid; gap: var(--space-4); }
+  @media (min-width: 560px) { .form-grid.two { grid-template-columns: 1fr 1fr; } }
+  .form-note { font-size: .8125rem; line-height: 1.55; margin-top: var(--space-3); }
+  .band-dark .form-note { color: rgba(250,247,242,.55); }
+  .form-status { display: none; margin-top: var(--space-4); padding: 1rem 1.1rem; border-radius: 12px; font-size: .9375rem; line-height: 1.5; }
+  .form-status.ok { display: block; background: var(--tiffany-mist); color: var(--teal-deep); border: 1px solid var(--tiffany-soft); }
+  .form-status.err { display: block; background: #FBEDEF; color: var(--error); border: 1px solid #F1CDD3; }
+  .band-dark .form-status.ok { background: rgba(129,216,208,.14); color: var(--tiffany); border-color: rgba(129,216,208,.3); }
+  .is-sending .btn[type="submit"] { opacity: .7; pointer-events: none; }
+
+  /* Services */
+  .services { background: var(--ivory); }
+  .svc-rows { display: grid; gap: clamp(3.5rem, 2rem + 5vw, 7rem); }
+  .svc-row { display: grid; gap: var(--space-8); align-items: center; }
+  .svc-img { position: relative; overflow: hidden; border-radius: var(--radius-lg); aspect-ratio: 4 / 3; background: var(--stone); }
+  .svc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
+  .svc-img:hover img { transform: scale(1.04); }
+  .img-treat::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .06; pointer-events: none; }
+
+  .svc-body .h3 { font-size: clamp(2rem, 1.6rem + 1.4vw, 2.75rem); letter-spacing: -0.025em; margin-bottom: var(--space-4); }
+  .svc-body > p { color: var(--muted); max-width: 46ch; }
+  .svc-list { margin: var(--space-8) 0 var(--space-10); display: grid; grid-template-columns: 1fr; column-gap: var(--space-8); border-top: 1px solid var(--stone); }
+  .svc-list li { padding: .85rem 0; border-bottom: 1px solid var(--stone); font-size: .975rem; line-height: 1.45; color: var(--text); }
+  .svc-list .note { display: block; margin-top: .2rem; font-size: .85rem; color: var(--muted); }
+  @media (min-width: 1200px) { .svc-list { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 960px) {
+    .svc-row { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 1rem + 4vw, 6rem); }
+    .svc-row.flip .svc-img { order: 2; }
+    .svc-img { aspect-ratio: 4 / 5; }
+    .svc-row.wide-img .svc-img { aspect-ratio: 1 / 1; }
+  }
+  .svc-note { margin-top: clamp(3.5rem, 2rem + 4vw, 6rem); text-align: center; font-size: 1rem; color: var(--muted); }
+  .svc-note strong { color: var(--ink); font-weight: 600; }
+
+  /* Gallery */
+  .gallery { background: var(--cream); }
+  .gallery::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(40% 50% at 90% 0%, rgba(129,216,208,.18), transparent 70%), radial-gradient(35% 45% at 0% 100%, rgba(255,255,255,.7), transparent 70%); }
+  .gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(.75rem, .5rem + 1vw, 1.5rem); position: relative; }
+  @media (min-width: 900px) { .gal-grid { grid-template-columns: repeat(3, 1fr); } .gal-item:nth-child(3n+2) { transform: translateY(2.5rem); } .gal-grid { padding-bottom: 2.5rem; } }
+  @media (max-width: 699px) {
+    .gal-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .85rem; margin-inline: calc(var(--gutter) * -1); padding: .25rem var(--gutter) 1.5rem; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .gal-grid::-webkit-scrollbar { display: none; }
+    .gal-item { flex: 0 0 min(74%, 300px); scroll-snap-align: start; }
+    .gal-item figcaption { padding: 1rem 1.1rem; }
+    .gal-item figcaption b { font-size: 1.25rem; }
+    .gal-item figcaption span { font-size: .8rem; }
+    .gal-hint { display: flex; }
+  }
+  .gal-hint { display: none; align-items: center; justify-content: center; gap: .5rem; margin-top: .25rem; font-size: .85rem; color: var(--muted); }
+  .gal-hint svg { width: 18px; height: 18px; color: var(--teal); }
+  .gal-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3 / 4; background: var(--stone); }
+  .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease-out); }
+  .gal-item:hover img { transform: scale(1.06); }
+  .gal-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 1.1rem 1.2rem; color: var(--ivory); }
+  .gal-item figcaption b { display: block; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + .5vw, 1.45rem); font-weight: 600; line-height: 1.1; }
+  .gal-item figcaption span { font-size: .78rem; letter-spacing: .04em; opacity: .85; }
+  .gal-item::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(15,30,29,.85) 0%, rgba(15,30,29,.55) 22%, rgba(15,30,29,0) 48%); }
+  .gal-item::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .06; }
+
+  /* Benefits */
+  .benefits { background: var(--white); }
+  .ben-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+  .ben { position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; gap: var(--space-4); padding: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); border-radius: var(--radius-lg); background: var(--ivory); border: 1px solid var(--stone); transition: transform .55s var(--spring); }
+  .ben:hover { transform: translateY(-6px); }
+  .ben-icon { width: 60px; height: 60px; flex: none; border-radius: 18px; display: grid; place-items: center; background: var(--tiffany-mist); color: var(--teal); margin-bottom: var(--space-8); transition: transform .55s var(--spring), background-color .3s ease, color .3s ease; }
+  .ben-icon svg { width: 28px; height: 28px; }
+  .ben:hover .ben-icon { transform: rotate(-6deg) scale(1.06); background: var(--teal); color: var(--white); }
+  .ben .h3 { font-size: clamp(1.45rem, 1.3rem + .5vw, 1.75rem); margin-bottom: var(--space-3); }
+  .ben-text { margin-top: auto; }
+  .ben p { color: var(--muted); font-size: .97rem; }
+  .ben-wide .h3 { font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem); max-width: 20ch; }
+  .ben-wide p { max-width: 46ch; font-size: 1.02rem; }
+  .ben-mist { background: var(--tiffany-mist); border-color: var(--tiffany-soft); }
+  .ben-mist::before { content: ""; position: absolute; z-index: -1; right: -60px; bottom: -80px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(129,216,208,.45), rgba(129,216,208,0) 70%); }
+  .ben-mist .ben-icon { background: var(--white); }
+  .ben-dark { background: var(--ink); border-color: var(--ink); }
+  .ben-dark::before { content: ""; position: absolute; z-index: -1; left: -80px; top: -100px; width: 320px; height: 320px; border-radius: 50%; background: radial-gradient(circle, rgba(129,216,208,.22), rgba(129,216,208,0) 70%); }
+  .ben-dark .h3 { color: var(--ivory); }
+  .ben-dark p { color: rgba(250,247,242,.7); }
+  .ben-dark .ben-icon { background: rgba(129,216,208,.14); color: var(--tiffany); }
+  .ben-dark:hover .ben-icon { background: var(--tiffany); color: var(--ink); }
+  .ben-bg-icon { position: absolute; z-index: -1; right: clamp(1rem, 3vw, 2.5rem); bottom: -1.5rem; width: 180px; height: 180px; opacity: .07; color: var(--teal); transition: transform .8s var(--ease-out); }
+  .ben-dark .ben-bg-icon { color: var(--tiffany); opacity: .08; }
+  .ben:hover .ben-bg-icon { transform: rotate(-8deg) translateY(-6px); }
+  @media (min-width: 700px) { .ben-grid { grid-template-columns: 1fr 1fr; } .ben-wide { grid-column: span 2; } }
+  @media (min-width: 1100px) { .ben-grid { grid-template-columns: repeat(4, 1fr); } .ben-wide { grid-column: span 2; } .ben-wide .ben-text { padding-right: 120px; } }
+  .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); margin-top: var(--space-12); }
+  @media (min-width: 900px) { .stats { grid-template-columns: repeat(4, 1fr); } }
+  .stat { text-align: center; padding-top: var(--space-6); border-top: 1px solid var(--stone); }
+  .stat b { display: block; font-family: var(--serif); font-size: clamp(2.6rem, 2rem + 2.2vw, 3.8rem); font-weight: 600; line-height: 1; letter-spacing: -0.03em; color: var(--teal); }
+  .stat span { display: block; margin: .5rem auto 0; max-width: 22ch; font-size: .875rem; color: var(--muted); line-height: 1.45; text-wrap: balance; }
+
+  /* CTA */
+  .cta { position: relative; overflow: hidden; background: var(--tiffany-mist); min-height: 460px; display: flex; align-items: center; }
+  .cta-media { position: absolute; inset: 0; }
+  .cta-media img { width: 100%; height: 100%; object-fit: cover; object-position: 20% 50%; }
+  .cta-media::before { content: ""; position: absolute; inset: 0; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .08; }
+  .cta-media::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(234,246,244,.97) 0%, rgba(234,246,244,.85) 50%, rgba(234,246,244,.1) 100%); }
+  .cta-content { position: relative; z-index: 2; padding-block: var(--section-y); margin-top: 180px; }
+  .cta-content .h2 { max-width: 14ch; }
+  .cta-content .lead { color: var(--text); max-width: 42ch; margin-top: var(--space-6); }
+  .cta-content .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
+  @media (max-width: 899px) {
+    .cta { flex-direction: column; align-items: stretch; min-height: 0; }
+    .cta-media { position: relative; inset: auto; height: clamp(260px, 62vw, 460px); }
+    .cta-media img { object-position: 22% 45%; }
+    .cta-media::after { background: linear-gradient(0deg, var(--tiffany-mist) 0%, rgba(234,246,244,.5) 16%, rgba(234,246,244,0) 40%); }
+    .cta-content { margin-top: 0; padding-top: var(--space-6); }
+    .ben-icon { width: 52px; height: 52px; border-radius: 16px; margin-bottom: var(--space-2); }
+    .ben-icon svg { width: 24px; height: 24px; }
+  }
+  @media (min-width: 900px) {
+    .cta { min-height: 540px; }
+    .cta-media::after { background: linear-gradient(90deg, rgba(234,246,244,0) 25%, rgba(234,246,244,.75) 48%, rgba(234,246,244,.95) 70%); }
+    .cta-content { margin-top: 0; display: flex; justify-content: flex-end; }
+    .cta-inner { width: min(520px, 48%); }
+  }
+
+  /* Testimonials */
+  .reviews { background: var(--ivory); }
+  .rev-grid { display: grid; gap: var(--space-6); }
+  @media (min-width: 720px) { .rev-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .rev-grid { grid-template-columns: repeat(3, 1fr); } }
+  .rev { border: 1px solid var(--stone); background: var(--cream); border-radius: var(--radius); padding: var(--space-8); display: flex; flex-direction: column; gap: var(--space-4); transition: transform .5s var(--spring); }
+  .rev:hover { transform: translateY(-4px); }
+  .stars { display: flex; gap: 3px; color: #C9A15B; }
+  .stars svg { width: 14px; height: 14px; }
+  .rev blockquote { font-family: var(--serif); font-size: 1.32rem; font-weight: 600; line-height: 1.3; color: var(--ink); letter-spacing: -0.01em; }
+  .rev footer { margin-top: auto; font-size: .82rem; color: var(--muted); display: flex; align-items: center; gap: .6rem; }
+  .avatar { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--tiffany-soft); color: var(--teal-deep); font-weight: 600; font-size: .8rem; }
+
+  /* Experts */
+  .experts { background: var(--white); }
+  .exp-grid { display: grid; gap: var(--space-8); }
+  @media (min-width: 720px) { .exp-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+  .exp-photo { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); overflow: hidden; background: var(--stone); }
+  .exp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; transition: transform 1.1s var(--ease-out); }
+  .exp:hover .exp-photo img { transform: scale(1.05); }
+  .exp-role { border: 1px solid var(--stone); position: absolute; left: 1rem; bottom: 1rem; z-index: 2; padding: .45rem .8rem; border-radius: 999px; background: rgba(250,247,242,.92); backdrop-filter: blur(6px); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-deep); }
+  .exp-body { padding: var(--space-6) var(--space-2) 0; }
+  .exp-body .h3 { margin-bottom: .35rem; }
+  .exp-body p { color: var(--muted); font-size: .95rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: var(--space-4); }
+  .chip { padding: .35rem .65rem; border-radius: 8px; background: var(--cream); font-size: .8rem; font-weight: 500; color: var(--ink); }
+
+  /* Prices */
+  .prices { background: var(--cream); }
+  .prices::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(45% 55% at 100% 30%, rgba(129,216,208,.2), transparent 70%), radial-gradient(35% 40% at 0% 90%, rgba(255,255,255,.65), transparent 70%); }
+  .tabs { border: 1px solid var(--sand); display: flex; justify-content: center; gap: .4rem; padding: .35rem; background: var(--white); border-radius: 999px; width: max-content; max-width: 100%; margin: 0 auto var(--space-10); position: relative; overflow-x: auto; }
+  .tab { min-height: 44px; padding: .55rem 1.3rem; border-radius: 999px; border: 0; background: transparent; cursor: pointer; font-size: .9rem; font-weight: 500; color: var(--muted); transition: background-color .25s ease, color .25s ease, transform .4s var(--spring); white-space: nowrap; }
+  .tab:hover { color: var(--ink); background: var(--cream); }
+  .tab:active { transform: scale(.96); }
+  .tab:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .tab[aria-selected="true"] { background: var(--teal); color: var(--white); }
+  .price-card { border: 1px solid var(--stone); position: relative; max-width: 860px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); padding: clamp(1.5rem, 1rem + 2.5vw, 3rem); }
+  .price-panel[hidden] { display: none; }
+  .price-panel { animation: fadeUp .5s var(--ease-out); }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .price-row { display: flex; align-items: baseline; gap: var(--space-4); padding: 1rem 0; border-bottom: 1px solid var(--stone); }
+  .price-row:last-child { border-bottom: 0; }
+  .price-name { flex: 1 1 auto; min-width: 0; }
+  .price-name b { display: block; font-weight: 500; color: var(--ink); }
+  .price-name small { display: block; font-size: .82rem; color: var(--muted); line-height: 1.45; margin-top: .15rem; }
+  .price-val { flex: none; font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--teal); white-space: nowrap; }
+  .price-val small { font-family: var(--sans); font-size: .75rem; font-weight: 500; color: var(--muted); margin-right: .25rem; }
+  @media (max-width: 559px) { .price-row { flex-direction: column; align-items: flex-start; gap: .3rem; } }
+  .price-foot { text-align: center; margin-top: var(--space-8); font-size: .9rem; color: var(--muted); max-width: 640px; margin-inline: auto; }
+
+  /* Main booking */
+  .booking { background: var(--ivory); }
+  .booking::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(40% 50% at 0% 10%, rgba(129,216,208,.16), transparent 70%), radial-gradient(40% 50% at 100% 90%, rgba(233,226,214,.7), transparent 70%); }
+  .book-wrap { position: relative; display: grid; gap: var(--space-10); align-items: start; }
+  @media (min-width: 1024px) { .book-wrap { grid-template-columns: .85fr 1.15fr; gap: var(--space-16); } .book-aside { position: sticky; top: calc(var(--header-h) + 2rem); } }
+  .book-aside .h2 { margin: 0 0 var(--space-4); }
+  .aside-list { display: grid; gap: var(--space-4); margin-top: var(--space-8); }
+  .aside-item { display: flex; gap: var(--space-4); align-items: flex-start; }
+  .aside-item b { display: block; color: var(--ink); font-weight: 500; }
+  .aside-item span { font-size: .9rem; color: var(--muted); }
+  .form-card { background: var(--white); border-radius: var(--radius-lg); padding: clamp(1.5rem, 1rem + 2.5vw, 3rem); border: 1px solid rgba(233,226,214,.7); }
+  fieldset { border: 0; padding: 0; margin: 0 0 var(--space-4); }
+  legend { display: flex; align-items: center; gap: .75rem; width: 100%; margin-bottom: var(--space-4); font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--ink); }
+  legend::after { content: ""; flex: 1; height: 1px; background: var(--stone); }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg label { display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: 52px; border-radius: 12px; border: 1px solid var(--line); background: var(--white); cursor: pointer; font-weight: 500; color: var(--ink); transition: background-color .2s ease, border-color .2s ease, transform .4s var(--spring); }
+  .seg label svg { width: 20px; height: 20px; color: var(--teal); }
+  .seg label:hover { border-color: var(--teal); }
+  .seg label:active { transform: scale(.97); }
+  .seg input:focus-visible + label { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .seg input:checked + label { background: var(--tiffany-mist); border: 2px solid var(--teal); }
+  .slots { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .slot { min-height: 44px; min-width: 72px; padding: .5rem .9rem; border-radius: 10px; border: 1px solid var(--line); background: var(--white); cursor: pointer; font-size: .9rem; font-weight: 500; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .4s var(--spring); }
+  .slot:hover { border-color: var(--teal); }
+  .slot:active { transform: scale(.95); }
+  .slot:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+  .slot[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: var(--white); }
+  .consent { display: flex; gap: .75rem; align-items: center; min-height: 44px; font-size: .85rem; color: var(--muted); line-height: 1.5; cursor: pointer; }
+  .consent input { width: 22px; height: 22px; accent-color: var(--teal); flex: none; cursor: pointer; }
+
+  /* Contacts */
+  .contacts { background: var(--white); }
+  .ct-grid { display: grid; gap: var(--space-6); }
+  @media (min-width: 960px) { .ct-grid { grid-template-columns: .9fr 1.1fr; } }
+  .ct-card { background: var(--cream); border-radius: var(--radius-lg); padding: clamp(1.5rem, 1rem + 2vw, 2.75rem); display: flex; flex-direction: column; gap: var(--space-6); }
+  .ct-row { display: flex; gap: var(--space-4); align-items: flex-start; }
+  .ct-row .icon-dot { background: var(--white); }
+  .ct-row small { display: block; font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .ct-row > div { min-width: 0; }
+  .ct-row a { display: inline-block; padding-block: .55rem; margin-block: -.55rem; }
+  .ct-row a, .ct-row p { overflow-wrap: anywhere; font-size: 1.05rem; color: var(--ink); font-weight: 500; }
+  .socials { display: flex; gap: .6rem; }
+  .soc { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line); color: var(--ink); background: var(--white); transition: transform .45s var(--spring), background-color .2s ease, color .2s ease, border-color .2s ease; }
+  .soc svg { width: 20px; height: 20px; }
+  .soc:hover { transform: translateY(-3px); background: var(--teal); border-color: var(--teal); color: var(--white); }
+  .soc:active { transform: scale(.94); }
+  .soc:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .map { border: 1px solid var(--stone); position: relative; min-height: 380px; border-radius: var(--radius-lg); overflow: hidden; background: var(--stone); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(.55) contrast(.95); }
+
+  /* Footer */
+  .footer { background: var(--ink); color: rgba(250,247,242,.7); padding: var(--space-16) 0 var(--space-8); position: relative; overflow: hidden; }
+  .footer::before { content: ""; position: absolute; inset: 0; background: radial-gradient(40% 60% at 100% 0%, rgba(129,216,208,.12), transparent 70%); pointer-events: none; }
+  .foot-grid { position: relative; display: grid; gap: var(--space-10); }
+  @media (min-width: 800px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1.2fr; } }
+  .footer .logo-name { color: var(--ivory); }
+  .footer .logo-sub { color: var(--tiffany); }
+  .footer h4 { font-family: var(--serif); font-size: 1.3rem; font-weight: 600; color: var(--ivory); margin-bottom: var(--space-4); }
+  .footer li { font-size: .95rem; }
+  .footer li + li { margin-top: .1rem; }
+  .footer li a { display: inline-block; padding-block: .6rem; }
+  .foot-bottom a { display: inline-block; padding-block: .7rem; }
+  @media (max-width: 1023px) { .footer { padding-bottom: calc(var(--space-8) + 80px); } }
+  .footer .form-note { margin: var(--space-4) 0 var(--space-6); color: rgba(250,247,242,.6); max-width: 36ch; }
+  .footer a { color: rgba(250,247,242,.8); font-size: .92rem; }
+  .footer a:hover { color: var(--tiffany); }
+  .footer a:focus-visible { outline-color: var(--tiffany); }
+  .footer .soc { background: transparent; border-color: rgba(255,255,255,.5); color: var(--ivory); }
+  .footer .soc:hover { background: var(--tiffany); border-color: var(--tiffany); color: var(--ink); }
+  .foot-bottom { position: relative; margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid rgba(255,255,255,.1); display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: space-between; align-items: center; font-size: .8rem; color: rgba(250,247,242,.66); }
+
+  /* Floating booking button */
+  .fab { border: 2px solid var(--ivory); position: fixed; z-index: 45; left: 50%; bottom: 1rem; transform: translate(-50%, 140%); opacity: 0; transition: transform .6s var(--spring), opacity .3s ease; }
+  .fab.is-visible { transform: translate(-50%, 0); opacity: 1; }
+  .fab.is-visible:hover { transform: translate(-50%, -2px); }
+  .fab.is-visible:active { transform: translate(-50%, 0) scale(.98); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
+  .reveal.is-in { opacity: 1; transform: none; }
+  .gal-grid .reveal.is-in:nth-child(3n+2) { transform: none; }
+  .ben.reveal.is-in:hover { transform: translateY(-6px); }
+  .rev.reveal.is-in:hover { transform: translateY(-4px); }
+  .stagger > .reveal.is-in:hover { transition-delay: 0s; }
+  @media (min-width: 900px) { .gal-grid .gal-item.reveal.is-in:nth-child(3n+2) { transform: translateY(2.5rem); } }
+  .stagger > .reveal:nth-child(2) { transition-delay: .08s; } .stagger > .reveal:nth-child(3) { transition-delay: .16s; } .stagger > .reveal:nth-child(4) { transition-delay: .24s; } .stagger > .reveal:nth-child(5) { transition-delay: .32s; } .stagger > .reveal:nth-child(6) { transition-delay: .4s; }
+
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .skip { position: absolute; left: 1rem; top: -100px; z-index: 200; background: var(--ink); color: var(--ivory); padding: .75rem 1rem; border-radius: 10px; }
+  .skip:focus { top: 1rem; }
+
+  /* Very narrow phones (iPhone SE 1st gen, small Android) */
+  @media (max-width: 359px) {
+    :root { --gutter: 1rem; --h1: 1.95rem; --h2: 1.8rem; --h3: 1.4rem; --text-body: .95rem; }
+    .lead { font-size: 1rem; }
+    .svc-body .h3 { font-size: 1.75rem; }
+    .ben .h3 { font-size: 1.35rem; }
+    .ben-wide .h3 { font-size: 1.5rem; }
+    .ben { padding: 1.4rem; }
+    .rev { padding: 1.5rem; }
+    .rev blockquote { font-size: 1.18rem; }
+    .price-card { padding: 1.25rem; }
+    .price-name b { font-size: .95rem; }
+    .glass, .form-card { padding: 1.25rem; }
+    .step span, .aside-item span { font-size: .84rem; }
+    .stat span { font-size: .8rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+    .reveal, .load-in { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Перейти до&nbsp;вмісту</a>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" class="sr-only" aria-hidden="true">
+  <symbol id="i-paw" viewBox="0 0 24 24" fill="currentColor"><ellipse cx="6.2" cy="9.6" rx="1.9" ry="2.4"/><ellipse cx="10" cy="5.8" rx="2" ry="2.6"/><ellipse cx="14.6" cy="5.8" rx="2" ry="2.6"/><ellipse cx="18.2" cy="9.8" rx="1.9" ry="2.4"/><path d="M12.3 11.2c-2.6 0-5.6 3.6-5.6 6.1 0 1.8 1.5 2.5 3 2.5 1.2 0 1.7-.6 2.6-.6.9 0 1.4.6 2.6.6 1.5 0 3-.7 3-2.5 0-2.5-3-6.1-5.6-6.1Z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c.6 4.9 2.1 6.4 7 7-4.9.6-6.4 2.1-7 7-.6-4.9-2.1-6.4-7-7 4.9-.6 6.4-2.1 7-7Z"/><path d="M19 15c.3 2.1.9 2.7 3 3-2.1.3-2.7.9-3 3-.3-2.1-.9-2.7-3-3 2.1-.3 2.7-.9 3-3Z" opacity=".6"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.6-7.5 10-7.5 10Z"/></symbol>
+  <symbol id="i-bottle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M10 2.5h4M10.5 2.5v3h3v-3M9 5.5h6l1.5 3v11a2 2 0 0 1-2 2h-5a2 2 0 0 1-2-2v-11L9 5.5Z"/><path d="M7.5 12h9"/></symbol>
+  <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="17.5" r="3"/><circle cx="18" cy="17.5" r="3"/><path d="M8.2 15.5 18 3.5M15.8 15.5 6 3.5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2.8 2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 17l-5.8 3.3 1.4-6.4-4.9-4.4 6.5-.7L12 2.8Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-tg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M20.5 4 3.5 10.6l5.6 2 2.1 6.4 3.1-3.6 4.6 3.4L20.5 4Z"/><path d="m9.1 12.6 8-5.6-6 7"/></symbol>
+  <symbol id="i-viber" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3c5 0 8 2 8 7.5S17 18 12 18c-.9 0-1.7-.1-2.4-.2L6 21v-3.8C4.6 16 4 14 4 10.5 4 5 7 3 12 3Z"/><path d="M9.3 7.8c.4-.3.9-.3 1.1.1l.7 1.3c.2.4.1.8-.2 1l-.4.3c.5 1.1 1.3 1.9 2.4 2.4l.3-.4c.2-.3.6-.4 1-.2l1.3.7c.4.2.4.7.1 1.1-.6.8-1.5 1-2.4.6a7.3 7.3 0 0 1-4.1-4.1c-.4-.9-.2-1.8.2-2.8Z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="m12 3 9 4.8-9 4.8-9-4.8L12 3Z"/><path d="m3 12.2 9 4.8 9-4.8M3 16.4l9 4.8 9-4.8"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3.5 12.6V4.5a1 1 0 0 1 1-1h8.1l8 8a1.4 1.4 0 0 1 0 2l-7.1 7.1a1.4 1.4 0 0 1-2 0l-8-8Z"/><circle cx="8.3" cy="8.3" r="1.5"/></symbol>
+  <symbol id="i-cat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M5 4l3.2 3.6A9 9 0 0 1 12 7a9 9 0 0 1 3.8.6L19 4v8.5c0 4.2-3.1 7.5-7 7.5s-7-3.3-7-7.5V4Z"/><circle cx="9.5" cy="12" r=".9" fill="currentColor"/><circle cx="14.5" cy="12" r=".9" fill="currentColor"/></symbol>
+</svg>
+
+<header class="header" id="top">
+  <div class="rail">
+    <a href="#top" class="logo" aria-label="Pet Beauty Grooming Studio — на початок">
+      <span class="logo-mark"><svg><use href="#i-paw"/></svg></span>
+      <span class="logo-text"><span class="logo-name">Pet Beauty</span><span class="logo-sub">Grooming Studio</span></span>
+    </a>
+    <nav class="nav" aria-label="Основна навігація">
+      <a class="link-u" href="#services">Послуги</a>
+      <a class="link-u" href="#gallery">Наші роботи</a>
+      <a class="link-u" href="#experts">Майстри</a>
+      <a class="link-u" href="#prices">Ціни</a>
+      <a class="link-u" href="#reviews">Відгуки</a>
+      <a class="link-u" href="#contacts">Контакти</a>
+    </nav>
+    <a href="#booking" class="btn btn-primary btn-sm header-cta"><svg><use href="#i-cal"/></svg>Записатися</a>
+    <button class="burger" type="button" aria-label="Відкрити меню" aria-expanded="false" aria-controls="mobile-menu"><span class="burger-lines"><span></span><span></span><span></span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#services">Послуги</a>
+  <a href="#gallery">Наші роботи</a>
+  <a href="#experts">Майстри</a>
+  <a href="#prices">Ціни</a>
+  <a href="#reviews">Відгуки</a>
+  <a href="#contacts">Контакти</a>
+  <a href="#booking" class="btn btn-primary btn-block"><svg><use href="#i-cal"/></svg>Записатися онлайн</a>
+</div>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-media"><img src="images/hero.jpg" alt="Мальтійська болонка після грумінгу з бантиком кольору тіффані в студії" fetchpriority="high"></div>
+    <div class="rail hero-content">
+      <h1 class="display load-in d2" id="hero-title">Професійний грумінг для&nbsp;собак і&nbsp;котів</h1>
+      <p class="lead load-in d3">Догляд, краса та&nbsp;комфорт для&nbsp;ваших улюбленців&nbsp;— з&nbsp;турботою про&nbsp;кожну деталь.</p>
+      <div class="hero-actions load-in d4">
+        <a href="#booking" class="btn btn-primary">Записатися онлайн <svg class="arrow"><use href="#i-arrow"/></svg></a>
+        <a href="#services" class="btn btn-outline">Наші послуги</a>
+      </div>
+      <ul class="hero-feats load-in d5">
+        <li class="hero-feat"><span class="icon-dot"><svg><use href="#i-heart"/></svg></span>Індивідуальний підхід</li>
+        <li class="hero-feat"><span class="icon-dot"><svg><use href="#i-bottle"/></svg></span>Професійна косметика</li>
+        <li class="hero-feat"><span class="icon-dot"><svg><use href="#i-paw"/></svg></span>Усе в&nbsp;одному місці</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- QUICK BOOKING -->
+  <section class="section band-dark" id="quick-booking" aria-labelledby="quick-title">
+    <div class="rail quick-grid">
+      <div class="reveal">
+        <h2 class="h2" id="quick-title">Запис за&nbsp;одну хвилину</h2>
+        <p class="lead">Оберіть послугу та&nbsp;зручний час&nbsp;— без&nbsp;зайвих телефонних дзвінків. Ми&nbsp;зв'яжемося, щоб&nbsp;підтвердити візит.</p>
+        <ol class="steps">
+          <li class="step"><span class="step-num">1</span><p><strong>Залиште заявку</strong><span>Ім'я, телефон і&nbsp;бажана послуга</span></p></li>
+          <li class="step"><span class="step-num">2</span><p><strong>Узгодимо деталі</strong><span>Майстра, час і&nbsp;вартість&nbsp;—&nbsp;заздалегідь</span></p></li>
+          <li class="step"><span class="step-num">3</span><p><strong>Чекаємо на&nbsp;вас</strong><span>Спокійний візит без&nbsp;поспіху</span></p></li>
+        </ol>
+      </div>
+      <form class="glass reveal js-booking" data-form="Швидкий запис" novalidate>
+        <h3 class="h3">Швидка&nbsp;заявка</h3>
+        <p class="form-note">Повна форма з&nbsp;вибором майстра та&nbsp;часу&nbsp;— <a class="link-u" href="#booking">нижче на&nbsp;сторінці</a>.</p>
+        <div class="form-grid two">
+          <div class="field"><label class="label" for="q-name">Ваше ім'я <span class="req">*</span></label><input class="input" id="q-name" name="Ім'я" autocomplete="name" placeholder="Олена" required></div>
+          <div class="field"><label class="label" for="q-phone">Телефон <span class="req">*</span></label><input class="input" id="q-phone" name="Телефон" type="tel" autocomplete="tel" placeholder="+380 __ ___ __ __" required></div>
+        </div>
+        <div class="form-grid two">
+          <div class="field"><label class="label" for="q-pet">Улюбленець</label>
+            <select class="input" id="q-pet" name="Тварина"><option>Собака</option><option>Кіт</option></select></div>
+          <div class="field"><label class="label" for="q-svc">Послуга</label>
+            <select class="input" id="q-svc" name="Послуга"><option>Комплексний грумінг</option><option>Гігієнічна стрижка</option><option>Купання та сушіння</option><option>Експрес-линька / вичісування</option><option>Тримінг</option><option>SPA-догляд</option><option>Потрібна консультація</option></select></div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Записатися <svg class="arrow"><use href="#i-arrow"/></svg></button>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section services" id="services" aria-labelledby="services-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="services-title">Наші послуги</h2>
+        <p class="lead">Комплексний догляд для&nbsp;собак і&nbsp;котів: від&nbsp;купання та&nbsp;стрижки до&nbsp;догляду за&nbsp;лапками, очима&nbsp;й&nbsp;вушками.</p>
+      </div>
+      <div class="svc-rows">
+        <article class="svc-row reveal">
+          <div class="svc-img img-treat"><img src="images/svc-dog.jpg" alt="Грумер стриже карликового пуделя ножицями" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="h3">Грумінг&nbsp;собак</h3>
+            <p>Стрижки та&nbsp;догляд з&nbsp;урахуванням породи, типу шерсті й&nbsp;ваших побажань.</p>
+            <ul class="svc-list">
+              <li>Модельні та&nbsp;породні&nbsp;стрижки</li>
+              <li>Гігієнічні&nbsp;стрижки</li>
+              <li>Купання та&nbsp;догляд&nbsp;за&nbsp;шерстю</li>
+              <li>Сушіння&nbsp;та&nbsp;укладання</li>
+              <li>Експрес-линька&nbsp;та&nbsp;вичісування</li>
+              <li>Тримінг жорсткошерстих&nbsp;порід</li>
+              <li>Підстригання та&nbsp;шліфування&nbsp;кігтів</li>
+              <li>Очищення вушок і&nbsp;зони&nbsp;очей</li>
+              <li>Догляд&nbsp;за&nbsp;лапками</li>
+            </ul>
+            <a href="#booking" class="btn btn-primary" data-pet="dog">Записати собаку <svg class="arrow"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-row flip reveal">
+          <div class="svc-img img-treat"><img src="images/svc-cat.jpg" alt="Перського кота вичісують м'якою щіткою" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="h3">Грумінг&nbsp;котів</h3>
+            <p>Делікатно та&nbsp;спокійно&nbsp;— працюємо в&nbsp;темпі вашого кота, з&nbsp;увагою до&nbsp;його характеру.</p>
+            <ul class="svc-list">
+              <li>Професійне вичісування&nbsp;шерсті</li>
+              <li>Видалення зайвого&nbsp;підшерстя</li>
+              <li>Розплутування&nbsp;ковтунів</li>
+              <li>Гігієнічний&nbsp;догляд</li>
+              <li>Підстригання&nbsp;кігтів</li>
+              <li>Очищення вушок та&nbsp;зони&nbsp;очей</li>
+              <li>Купання&nbsp;та&nbsp;сушіння<span class="note">за&nbsp;потреби, якщо кіт добре переносить процедуру</span></li>
+            </ul>
+            <a href="#booking" class="btn btn-primary" data-pet="cat">Записати кота <svg class="arrow"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+        <article class="svc-row wide-img reveal">
+          <div class="svc-img img-treat"><img src="images/svc-spa.jpg" alt="Цуценя кавапу в піні під час SPA-процедури" loading="lazy"></div>
+          <div class="svc-body">
+            <h3 class="h3">SPA та&nbsp;догляд</h3>
+            <p>Процедури, що&nbsp;повертають шерсті блиск, а&nbsp;шкірі&nbsp;— комфорт. Підбираємо індивідуально за&nbsp;типом шерсті.</p>
+            <ul class="svc-list">
+              <li>Зволожувальні&nbsp;маски</li>
+              <li>Професійне&nbsp;кондиціонування</li>
+              <li>Догляд за&nbsp;сухою&nbsp;шерстю</li>
+              <li>Догляд за&nbsp;подушечками&nbsp;лап</li>
+              <li>Очищення зубів&nbsp;щіткою</li>
+              <li>Догляд за&nbsp;типом&nbsp;шерсті</li>
+            </ul>
+            <a href="#booking" class="btn btn-primary">Записатися на&nbsp;SPA <svg class="arrow"><use href="#i-arrow"/></svg></a>
+          </div>
+        </article>
+      </div>
+      <p class="svc-note reveal"><strong>Прозорі ціни.</strong> Вартість пояснюємо заздалегідь, а&nbsp;додаткові послуги погоджуємо з&nbsp;вами.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="gallery-title"><span>Наші роботи</span></h2>
+        <p class="lead">Кожен улюбленець іде від&nbsp;нас доглянутим, чистим і&nbsp;в&nbsp;гарному настрої.</p>
+      </div>
+      <div class="gal-grid stagger">
+        <figure class="gal-item reveal"><img src="images/g1.jpg" alt="Померанський шпіц зі стрижкою під ведмежа" loading="lazy"><figcaption><b>Померанський&nbsp;шпіц</b><span>Модельна&nbsp;стрижка</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g2.jpg" alt="Перський кіт після вичісування" loading="lazy"><figcaption><b>Перський&nbsp;кіт</b><span>Вичісування</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g3.jpg" alt="Йоркширський тер'єр з бантиком" loading="lazy"><figcaption><b>Йоркширський&nbsp;тер'єр</b><span>Стрижка&nbsp;«під&nbsp;цуценя»</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g4.jpg" alt="Біш фрізе з округлою стрижкою" loading="lazy"><figcaption><b>Біш&nbsp;фрізе</b><span>Породна&nbsp;стрижка</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g5.jpg" alt="Британський короткошерстий кіт" loading="lazy"><figcaption><b>Британський&nbsp;кіт</b><span>Видалення&nbsp;підшерстя</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g6.jpg" alt="Мініатюрний шнауцер після тримінгу" loading="lazy"><figcaption><b>Мініатюрний&nbsp;шнауцер</b><span>Тримінг</span></figcaption></figure>
+      </div>
+      <p class="gal-hint" aria-hidden="true">Гортайте, щоб побачити більше <svg><use href="#i-arrow"/></svg></p>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="section benefits" id="benefits" aria-labelledby="benefits-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="benefits-title">Догляд, у&nbsp;якому важлива кожна деталь</h2>
+      </div>
+      <div class="ben-grid stagger">
+        <article class="ben ben-wide ben-mist reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><div class="ben-text"><h3 class="h3">Індивідуальний&nbsp;підхід і&nbsp;турбота</h3><p>Враховуємо характер, темперамент, вік та&nbsp;особливості кожного улюбленця. Наша мета&nbsp;— зробити кожну процедуру максимально комфортною та&nbsp;спокійною.</p></div><svg class="ben-bg-icon" aria-hidden="true"><use href="#i-heart"/></svg></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-scissors"/></svg></span><div class="ben-text"><h3 class="h3">Професійний&nbsp;догляд</h3><p>Враховуємо породу, тип шерсті та&nbsp;ваші побажання&nbsp;— від&nbsp;стрижки до&nbsp;завершального&nbsp;укладання.</p></div></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-bottle"/></svg></span><div class="ben-text"><h3 class="h3">Якісна&nbsp;косметика</h3><p>Спеціалізовані засоби для&nbsp;шкіри та&nbsp;шерсті, підібрані під&nbsp;потреби саме вашого&nbsp;улюбленця.</p></div></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><div class="ben-text"><h3 class="h3">Усе&nbsp;в&nbsp;одному&nbsp;місці</h3><p>Купання, стрижка, вичісування, кігті, лапки, очі й&nbsp;вушка&nbsp;— за&nbsp;один візит.</p></div></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div class="ben-text"><h3 class="h3">Зручний&nbsp;онлайн-запис</h3><p>Обирайте послугу, майстра та&nbsp;час без&nbsp;зайвих телефонних дзвінків.</p></div></article>
+        <article class="ben ben-wide ben-dark reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span><div class="ben-text"><h3 class="h3">Прозорі&nbsp;ціни</h3><p>Заздалегідь пояснюємо вартість процедур і&nbsp;погоджуємо всі додаткові послуги з&nbsp;власником тварини&nbsp;— жодних сюрпризів після&nbsp;візиту.</p></div><svg class="ben-bg-icon" aria-hidden="true"><use href="#i-tag"/></svg></article>
+      </div>
+      <div class="stats stagger">
+        <div class="stat reveal"><b>22</b><span>процедури догляду</span></div>
+        <div class="stat reveal"><b>2</b><span>собаки та&nbsp;коти</span></div>
+        <div class="stat reveal"><b>1</b><span>візит&nbsp;— повний догляд</span></div>
+        <div class="stat reveal"><b>0</b><span>прихованих доплат</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="cta-media"><img src="images/cta.jpg" alt="Кокер-спанієль у піні під час купання" loading="lazy"></div>
+    <div class="rail cta-content">
+      <div class="cta-inner reveal">
+        <h2 class="h2" id="cta-title">Здорова шерсть і&nbsp;гарний настрій</h2>
+        <p class="lead">Маски, кондиціонування та&nbsp;делікатне купання&nbsp;— ваш улюбленець заслуговує на&nbsp;справжній&nbsp;відпочинок.</p>
+        <div class="actions">
+          <a href="#booking" class="btn btn-primary">Записатися на&nbsp;SPA <svg class="arrow"><use href="#i-arrow"/></svg></a>
+          <a href="#prices" class="btn btn-outline">Дивитися ціни</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="reviews-title"><span>Відгуки власників</span></h2>
+      </div>
+      <!-- ПРИМІТКА: тексти відгуків — зразки. Замініть на реальні відгуки клієнтів перед запуском. -->
+      <div class="rev-grid stagger">
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Наш шпіц уперше повернувся з&nbsp;грумінгу спокійним і&nbsp;щасливим. Стрижка&nbsp;— саме така, як&nbsp;ми&nbsp;хотіли.»</blockquote><footer><span class="avatar">ІК</span>Ірина К. · шпіц Бонні</footer></article>
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Кіт дуже боїться чужих рук, але&nbsp;тут з&nbsp;ним працювали неймовірно делікатно. Ковтуни зникли, а&nbsp;стресу&nbsp;— мінімум.»</blockquote><footer><span class="avatar">ОМ</span>Олександр М. · перський кіт Сімба</footer></article>
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Дуже зручно, що&nbsp;можна записатися онлайн. Ціну пояснили одразу, без&nbsp;сюрпризів після&nbsp;процедури.»</blockquote><footer><span class="avatar">НТ</span>Наталія Т. · йорк Лакі</footer></article>
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Після SPA шерсть у&nbsp;нашого бішона м'яка й&nbsp;блискуча. Відчувається, що&nbsp;косметику підбирають з&nbsp;розумінням.»</blockquote><footer><span class="avatar">АВ</span>Анна В. · біш фрізе Мія</footer></article>
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Тримінг шнауцера зробили ідеально за&nbsp;стандартом породи. Тепер ходимо тільки&nbsp;сюди.»</blockquote><footer><span class="avatar">ДЛ</span>Дмитро Л. · шнауцер Граф</footer></article>
+        <article class="rev reveal"><div class="stars" aria-label="5 з 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div><blockquote>«Затишна студія, уважні майстри й&nbsp;чудовий результат. Наш британець навіть&nbsp;не&nbsp;нервував.»</blockquote><footer><span class="avatar">ЮС</span>Юлія С. · британський кіт Тоффі</footer></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTS -->
+  <section class="section experts" id="experts" aria-labelledby="experts-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="experts-title">Наші майстри</h2>
+        <p class="lead">Працюємо з&nbsp;урахуванням особливостей породи, типу шерсті та&nbsp;побажань власника.</p>
+      </div>
+      <!-- ПРИМІТКА: імена, описи та фото майстрів — зразки. Замініть на реальні. -->
+      <div class="exp-grid stagger">
+        <article class="exp reveal"><div class="exp-photo"><img src="images/m1.jpg" alt="Ангеліна, засновниця студії, з мальтійською болонкою" loading="lazy"><span class="exp-role">Засновниця</span></div><div class="exp-body"><h3 class="h3">Ангеліна</h3><p>Майстер-грумер. Модельні та&nbsp;породні стрижки, комплексний&nbsp;догляд за&nbsp;собаками.</p><div class="chips"><span class="chip">Модельні стрижки</span><span class="chip">SPA</span><span class="chip">Дрібні породи</span></div></div></article>
+        <article class="exp reveal"><div class="exp-photo"><img src="images/m2.jpg" alt="Майстер з грумінгу котів з мейн-куном" loading="lazy"><span class="exp-role">Грумер котів</span></div><div class="exp-body"><h3 class="h3">Марія</h3><p>Делікатна робота з&nbsp;котами: вичісування, видалення підшерстя, розплутування ковтунів.</p><div class="chips"><span class="chip">Коти</span><span class="chip">Ковтуни</span><span class="chip">Підшерстя</span></div></div></article>
+        <article class="exp reveal"><div class="exp-photo"><img src="images/m3.jpg" alt="Грумер з ножицями поруч із ши-тцу" loading="lazy"><span class="exp-role">Грумер</span></div><div class="exp-body"><h3 class="h3">Олена</h3><p>Тримінг жорсткошерстих порід, гігієнічні стрижки та&nbsp;експрес-линька.</p><div class="chips"><span class="chip">Тримінг</span><span class="chip">Експрес-линька</span><span class="chip">Гігієна</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section class="section prices" id="prices" aria-labelledby="prices-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="prices-title"><span>Ціни</span></h2>
+        <p class="lead">Остаточна вартість залежить від&nbsp;розміру, породи та&nbsp;стану шерсті&nbsp;— ми&nbsp;завжди узгоджуємо її&nbsp;заздалегідь.</p>
+      </div>
+      <!-- ПРИМІТКА: ціни — орієнтовні зразки. Замініть на актуальні. -->
+      <div class="tabs reveal" role="tablist" aria-label="Категорії цін">
+        <button class="tab" role="tab" id="tab-dogs" aria-selected="true" aria-controls="panel-dogs">Собаки</button>
+        <button class="tab" role="tab" id="tab-cats" aria-selected="false" aria-controls="panel-cats" tabindex="-1">Коти</button>
+        <button class="tab" role="tab" id="tab-spa" aria-selected="false" aria-controls="panel-spa" tabindex="-1">SPA та&nbsp;догляд</button>
+      </div>
+      <div class="price-card reveal">
+        <div class="price-panel" role="tabpanel" id="panel-dogs" aria-labelledby="tab-dogs">
+          <div class="price-row"><div class="price-name"><b>Малі&nbsp;породи</b><small>Комплексний грумінг: купання, стрижка, сушіння, кігті, вушка,&nbsp;очі</small></div><div class="price-val"><small>від</small>900 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Середні&nbsp;породи</b><small>Комплексний грумінг, модельна або&nbsp;породна&nbsp;стрижка</small></div><div class="price-val"><small>від</small>1 200 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Великі&nbsp;породи</b><small>Комплексний&nbsp;грумінг</small></div><div class="price-val"><small>від</small>1 600 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Гігієнічна&nbsp;стрижка</b><small>Лапки, мордочка, гігієнічні&nbsp;зони</small></div><div class="price-val"><small>від</small>500 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Купання, сушіння&nbsp;та&nbsp;укладання</b></div><div class="price-val"><small>від</small>450 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Експрес-линька</b><small>Вичісування&nbsp;підшерстя</small></div><div class="price-val"><small>від</small>700 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Тримінг жорсткошерстих&nbsp;порід</b></div><div class="price-val"><small>від</small>1 000 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Кігті, вушка та&nbsp;зона&nbsp;очей</b><small>Окрема&nbsp;процедура</small></div><div class="price-val"><small>від</small>200 ₴</div></div>
+        </div>
+        <div class="price-panel" role="tabpanel" id="panel-cats" aria-labelledby="tab-cats" hidden>
+          <div class="price-row"><div class="price-name"><b>Комплексний&nbsp;догляд</b><small>Вичісування, гігієна, кігті, вушка,&nbsp;очі</small></div><div class="price-val"><small>від</small>1 000 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Професійне вичісування&nbsp;шерсті</b></div><div class="price-val"><small>від</small>500 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Видалення зайвого&nbsp;підшерстя</b></div><div class="price-val"><small>від</small>700 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Розплутування&nbsp;ковтунів</b><small>Залежно&nbsp;від&nbsp;складності</small></div><div class="price-val"><small>від</small>300 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Гігієнічний&nbsp;догляд</b></div><div class="price-val"><small>від</small>400 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Купання&nbsp;та&nbsp;сушіння</b><small>Якщо кіт добре переносить&nbsp;процедуру</small></div><div class="price-val"><small>від</small>600 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Підстригання&nbsp;кігтів</b></div><div class="price-val"><small>від</small>150 ₴</div></div>
+        </div>
+        <div class="price-panel" role="tabpanel" id="panel-spa" aria-labelledby="tab-spa" hidden>
+          <div class="price-row"><div class="price-name"><b>Зволожувальна&nbsp;маска</b></div><div class="price-val"><small>від</small>250 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Професійне&nbsp;кондиціонування</b></div><div class="price-val"><small>від</small>200 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Догляд за&nbsp;сухою&nbsp;шерстю</b></div><div class="price-val"><small>від</small>300 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Косметичний догляд за&nbsp;подушечками&nbsp;лап</b></div><div class="price-val"><small>від</small>150 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Делікатне очищення зубів&nbsp;щіткою</b></div><div class="price-val"><small>від</small>200 ₴</div></div>
+          <div class="price-row"><div class="price-name"><b>Індивідуальний догляд за&nbsp;типом&nbsp;шерсті</b><small>Підбір засобів і&nbsp;програми&nbsp;догляду</small></div><div class="price-val"><small>від</small>400 ₴</div></div>
+        </div>
+      </div>
+      <p class="price-foot reveal">Додаткові послуги виконуємо лише після погодження з&nbsp;власником.</p>
+    </div>
+  </section>
+
+  <!-- MAIN BOOKING -->
+  <section class="section booking" id="booking" aria-labelledby="booking-title">
+    <div class="rail book-wrap">
+      <div class="book-aside reveal">
+        <h2 class="h2" id="booking-title">Запишіться на&nbsp;візит</h2>
+        <p class="lead">Оберіть послугу, майстра та&nbsp;зручний час. Ми&nbsp;зв'яжемося з&nbsp;вами, щоб&nbsp;підтвердити запис і&nbsp;узгодити вартість.</p>
+        <ul class="aside-list">
+          <li class="aside-item"><span class="icon-dot"><svg><use href="#i-check"/></svg></span><p><b>Без&nbsp;передоплати</b><span>Оплата&nbsp;— після процедури в&nbsp;студії</span></p></li>
+          <li class="aside-item"><span class="icon-dot"><svg><use href="#i-check"/></svg></span><p><b>Ціна&nbsp;заздалегідь</b><span>Пояснимо вартість до&nbsp;початку процедури</span></p></li>
+          <li class="aside-item"><span class="icon-dot"><svg><use href="#i-check"/></svg></span><p><b>Індивідуальний&nbsp;підхід</b><span>Розкажіть про&nbsp;характер улюбленця в&nbsp;коментарі</span></p></li>
+        </ul>
+      </div>
+      <form class="form-card reveal js-booking" id="booking-form" data-form="Онлайн-запис" novalidate>
+        <fieldset>
+          <legend>Ваші дані</legend>
+          <div class="form-grid two">
+            <div class="field"><label class="label" for="b-name">Ім'я <span class="req">*</span></label><input class="input" id="b-name" name="Ім'я" autocomplete="name" placeholder="Олена" required></div>
+            <div class="field"><label class="label" for="b-phone">Телефон <span class="req">*</span></label><input class="input" id="b-phone" name="Телефон" type="tel" autocomplete="tel" placeholder="+380 __ ___ __ __" required></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Ваш улюбленець</legend>
+          <div class="seg" role="radiogroup" aria-label="Тип тварини">
+            <input type="radio" name="Тварина" id="pet-dog" value="Собака" checked><label for="pet-dog"><svg><use href="#i-paw"/></svg>Собака</label>
+            <input type="radio" name="Тварина" id="pet-cat" value="Кіт"><label for="pet-cat"><svg><use href="#i-cat"/></svg>Кіт</label>
+          </div>
+          <div class="form-grid two">
+            <div class="field"><label class="label" for="b-breed">Порода</label><input class="input" id="b-breed" name="Порода" placeholder="Напр., мальтійська болонка"></div>
+            <div class="field"><label class="label" for="b-svc">Послуга <span class="req">*</span></label>
+              <select class="input" id="b-svc" name="Послуга" required>
+                <option value="">Оберіть послугу</option>
+                <optgroup label="Собаки" data-pet="dog">
+                  <option>Модельна / породна стрижка</option><option>Гігієнічна стрижка</option><option>Купання, сушіння та укладання</option><option>Експрес-линька та вичісування</option><option>Тримінг</option><option>Кігті, вушка, очі, лапки</option>
+                </optgroup>
+                <optgroup label="Коти" data-pet="cat">
+                  <option>Комплексний догляд за котом</option><option>Вичісування / видалення підшерстя</option><option>Розплутування ковтунів</option><option>Гігієнічний догляд</option><option>Підстригання кігтів</option>
+                </optgroup>
+                <optgroup label="SPA">
+                  <option>SPA-догляд за шерстю</option><option>Догляд за подушечками лап</option><option>Очищення зубів щіткою</option>
+                </optgroup>
+              </select></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Візит</legend>
+          <div class="form-grid two">
+            <div class="field"><label class="label" for="b-master">Майстер</label>
+              <select class="input" id="b-master" name="Майстер"><option>Будь-який вільний</option><option>Ангеліна</option><option>Марія</option><option>Олена</option></select></div>
+            <div class="field"><label class="label" for="b-date">Дата <span class="req">*</span></label><input class="input" id="b-date" name="Дата" type="date" required></div>
+          </div>
+          <div class="field">
+            <span class="label" id="slots-label">Бажаний час</span>
+            <div class="slots" role="group" aria-labelledby="slots-label">
+              <button type="button" class="slot" aria-pressed="false">10:00</button><button type="button" class="slot" aria-pressed="false">11:30</button><button type="button" class="slot" aria-pressed="false">13:00</button><button type="button" class="slot" aria-pressed="false">14:30</button><button type="button" class="slot" aria-pressed="false">16:00</button><button type="button" class="slot" aria-pressed="false">17:30</button>
+            </div>
+            <input type="hidden" name="Час" id="b-time">
+          </div>
+        </fieldset>
+        <div class="field">
+          <label class="label" for="b-note">Коментар</label>
+          <textarea class="input" id="b-note" name="Коментар" placeholder="Характер улюбленця, побажання до стрижки, ковтуни, вік…"></textarea>
+        </div>
+        <div class="field">
+          <label class="consent"><input type="checkbox" required id="b-consent"> Погоджуюся на&nbsp;обробку персональних даних для&nbsp;зв'язку щодо запису</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Надіслати заявку <svg class="arrow"><use href="#i-arrow"/></svg></button>
+        <p class="form-note muted">Ми&nbsp;зв'яжемося з&nbsp;вами для&nbsp;підтвердження часу візиту. Передоплата не&nbsp;потрібна.</p>
+        <div class="form-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section class="section contacts" id="contacts" aria-labelledby="contacts-title">
+    <div class="rail">
+      <div class="section-head reveal">
+        <h2 class="h2" id="contacts-title"><span>Як&nbsp;нас знайти</span></h2>
+      </div>
+      <!-- ПРИМІТКА: адреса, телефон, графік та соцмережі — зразки. Замініть на реальні. -->
+      <div class="ct-grid">
+        <div class="ct-card reveal">
+          <div class="ct-row"><span class="icon-dot"><svg><use href="#i-pin"/></svg></span><div><small>Адреса</small><p>м. Київ, вул. Садова, 12</p></div></div>
+          <div class="ct-row"><span class="icon-dot"><svg><use href="#i-phone"/></svg></span><div><small>Телефон</small><a class="link-u" href="tel:+380000000000">+38 (0XX) XXX-XX-XX</a></div></div>
+          <div class="ct-row"><span class="icon-dot"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><a class="link-u" href="mailto:angelina131917@gmail.com">angelina131917@gmail.com</a></div></div>
+          <div class="ct-row"><span class="icon-dot"><svg><use href="#i-clock"/></svg></span><div><small>Графік&nbsp;роботи</small><p>Щодня, 9:00&nbsp;– 20:00</p></div></div>
+          <div class="socials">
+            <a class="soc" href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+            <a class="soc" href="#" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
+            <a class="soc" href="#" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
+          </div>
+          <a href="#booking" class="btn btn-primary"><svg><use href="#i-cal"/></svg>Записатися онлайн</a>
+        </div>
+        <div class="map reveal">
+          <iframe title="Карта: Pet Beauty Grooming Studio" src="https://www.google.com/maps?q=%D0%9A%D0%B8%D1%97%D0%B2&amp;z=13&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="rail">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo" aria-label="На початок">
+          <span class="logo-mark"><svg><use href="#i-paw"/></svg></span>
+          <span class="logo-text"><span class="logo-name">Pet Beauty</span><span class="logo-sub">Grooming Studio</span></span>
+        </a>
+        <p class="form-note">Професійний грумінг для&nbsp;собак і&nbsp;котів. Турбота, індивідуальний підхід та&nbsp;якісна косметика.</p>
+        <div class="socials">
+          <a class="soc" href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a class="soc" href="#" aria-label="Telegram"><svg><use href="#i-tg"/></svg></a>
+          <a class="soc" href="#" aria-label="Viber"><svg><use href="#i-viber"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Навігація</h4>
+        <ul>
+          <li><a class="link-u" href="#services">Послуги</a></li>
+          <li><a class="link-u" href="#gallery">Наші роботи</a></li>
+          <li><a class="link-u" href="#experts">Майстри</a></li>
+          <li><a class="link-u" href="#prices">Ціни</a></li>
+          <li><a class="link-u" href="#booking">Онлайн-запис</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Контакти</h4>
+        <ul>
+          <li>м. Київ, вул. Садова,&nbsp;12</li>
+          <li><a class="link-u" href="tel:+380000000000">+38 (0XX) XXX-XX-XX</a></li>
+          <li><a class="link-u" href="mailto:angelina131917@gmail.com">angelina131917@gmail.com</a></li>
+          <li>Щодня, 9:00&nbsp;–&nbsp;20:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> Pet Beauty Grooming Studio</span>
+      <a class="link-u" href="#top">Нагору ↑</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#booking" class="btn btn-primary fab" aria-label="Записатися онлайн"><svg><use href="#i-cal"/></svg>Записатися</a>
+
+<script>
+(() => {
+  // === Налаштування онлайн-запису ===
+  // Заявки надсилаються на пошту через FormSubmit (безкоштовно, без сервера).
+  // Перша заявка надішле на пошту лист-активацію — підтвердіть його один раз.
+  const BOOKING_EMAIL = 'angelina131917@gmail.com';
+  const ENDPOINT = 'https://formsubmit.co/ajax/' + BOOKING_EMAIL;
+
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+
+  // Header state + FAB
+  const header = $('.header'), fab = $('.fab'), hero = $('.hero'), booking = $('#booking');
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle('is-scrolled', y > 20);
+    const past = y > hero.offsetHeight * .8;
+    const r = booking.getBoundingClientRect();
+    const inBooking = r.top < innerHeight && r.bottom > 0;
+    fab.classList.toggle('is-visible', past && !inBooking && innerWidth < 1024);
+  };
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); onScroll();
+
+  // Mobile menu
+  const burger = $('.burger');
+  const setMenu = open => { document.body.classList.toggle('menu-open', open); burger.setAttribute('aria-expanded', open); burger.setAttribute('aria-label', open ? 'Закрити меню' : 'Відкрити меню'); };
+  burger.addEventListener('click', () => setMenu(!document.body.classList.contains('menu-open')));
+  $$('#mobile-menu a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); } }), { threshold: .12, rootMargin: '0px 0px -40px 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  // Price tabs
+  const tabs = $$('.tab');
+  const selectTab = t => {
+    tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1; $('#' + x.getAttribute('aria-controls')).hidden = !on; });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => selectTab(t));
+    t.addEventListener('keydown', e => {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; selectTab(n); n.focus();
+    });
+  });
+
+  // Booking: date min, slots, pet preselect
+  const date = $('#b-date');
+  const today = new Date(); today.setMinutes(today.getMinutes() - today.getTimezoneOffset());
+  date.min = today.toISOString().slice(0, 10);
+  const slots = $$('.slot'), time = $('#b-time');
+  slots.forEach(s => s.addEventListener('click', () => {
+    const on = s.getAttribute('aria-pressed') !== 'true';
+    slots.forEach(x => x.setAttribute('aria-pressed', 'false'));
+    s.setAttribute('aria-pressed', on); time.value = on ? s.textContent : '';
+  }));
+  $$('[data-pet]').forEach(a => a.addEventListener('click', () => { const r = $('#pet-' + a.dataset.pet); if (r) r.checked = true; }));
+
+  // Submit
+  $$('.js-booking').forEach(form => form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const status = $('.form-status', form);
+    status.className = 'form-status'; status.textContent = '';
+    let bad = null;
+    $$('[required]', form).forEach(f => {
+      const invalid = f.type === 'checkbox' ? !f.checked : !f.value.trim() || (f.type === 'tel' && f.value.replace(/\D/g, '').length < 9);
+      if (f.type !== 'checkbox') f.setAttribute('aria-invalid', invalid);
+      if (invalid && !bad) bad = f;
+    });
+    if (bad) { status.className = 'form-status err'; status.textContent = 'Будь ласка, заповніть обов\'язкові\u00a0поля.'; bad.focus(); return; }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    data._subject = 'Нова заявка: ' + form.dataset.form + ' — Pet Beauty';
+    data._template = 'table';
+    data._captcha = 'false';
+    form.classList.add('is-sending');
+    try {
+      const res = await fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(data) });
+      if (!res.ok) throw new Error(res.status);
+      status.className = 'form-status ok';
+      status.textContent = 'Дякуємо! Заявку отримано\u00a0— ми зв\'яжемося з\u00a0вами найближчим часом, щоб\u00a0підтвердити запис.';
+      form.reset(); slots.forEach(x => x.setAttribute('aria-pressed', 'false')); $$('[aria-invalid]', form).forEach(f => f.removeAttribute('aria-invalid'));
+    } catch {
+      status.className = 'form-status err';
+      status.textContent = 'Не вдалося надіслати заявку. Спробуйте ще раз або напишіть нам на ' + BOOKING_EMAIL + '.';
+    } finally { form.classList.remove('is-sending'); }
+  }));
+  $$('.input').forEach(f => f.addEventListener('input', () => f.removeAttribute('aria-invalid')));
+})();
+</script>
+</body>
+</html>
