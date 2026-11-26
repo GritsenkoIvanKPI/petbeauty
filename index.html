@@ -297,7 +297,7 @@
   .gallery { background: var(--cream); }
   .gallery::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(40% 50% at 90% 0%, rgba(129,216,208,.18), transparent 70%), radial-gradient(35% 45% at 0% 100%, rgba(255,255,255,.7), transparent 70%); }
   .gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(.75rem, .5rem + 1vw, 1.5rem); position: relative; }
-  @media (min-width: 900px) { .gal-grid { grid-template-columns: repeat(3, 1fr); } .gal-item:nth-child(3n+2) { transform: translateY(2.5rem); } .gal-grid { padding-bottom: 2.5rem; } }
+  @media (min-width: 900px) { .gal-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 699px) {
     .gal-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .85rem; margin-inline: calc(var(--gutter) * -1); padding: .25rem var(--gutter) 1.5rem; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .gal-grid::-webkit-scrollbar { display: none; }
@@ -315,7 +315,7 @@
   .gal-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 1.1rem 1.2rem; color: var(--ivory); }
   .gal-item figcaption b { display: block; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + .5vw, 1.45rem); font-weight: 600; line-height: 1.1; }
   .gal-item figcaption span { font-size: .78rem; letter-spacing: .04em; opacity: .85; }
-  .gal-item::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(15,30,29,.85) 0%, rgba(15,30,29,.55) 22%, rgba(15,30,29,0) 48%); }
+  .gal-item::after { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(0deg, rgba(15,30,29,.86) 0%, rgba(15,30,29,.62) 13%, rgba(15,30,29,.3) 24%, rgba(15,30,29,.1) 32%, rgba(15,30,29,0) 40%); }
   .gal-item::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .06; }
 
   /* Benefits */
@@ -508,12 +508,10 @@
   /* Reveal */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
   .reveal.is-in { opacity: 1; transform: none; }
-  .gal-grid .reveal.is-in:nth-child(3n+2) { transform: none; }
   .ben.reveal.is-in:hover { transform: translateY(-6px); }
   .rev.reveal.is-in:hover { transform: translateY(-4px); }
   .stagger > .reveal.is-in:hover { transition-delay: 0s; }
-  @media (min-width: 900px) { .gal-grid .gal-item.reveal.is-in:nth-child(3n+2) { transform: translateY(2.5rem); } }
-  .stagger > .reveal:nth-child(2) { transition-delay: .08s; } .stagger > .reveal:nth-child(3) { transition-delay: .16s; } .stagger > .reveal:nth-child(4) { transition-delay: .24s; } .stagger > .reveal:nth-child(5) { transition-delay: .32s; } .stagger > .reveal:nth-child(6) { transition-delay: .4s; }
+  .stagger > .reveal:nth-child(2) { transition-delay: .08s; } .stagger > .reveal:nth-child(3) { transition-delay: .16s; } .stagger > .reveal:nth-child(4) { transition-delay: .24s; } .stagger > .reveal:nth-child(5) { transition-delay: .32s; } .stagger > .reveal:nth-child(6) { transition-delay: .4s; } .stagger > .reveal:nth-child(7) { transition-delay: .08s; } .stagger > .reveal:nth-child(8) { transition-delay: .16s; } .stagger > .reveal:nth-child(9) { transition-delay: .24s; }
 
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
   .skip { position: absolute; left: 1rem; top: -100px; z-index: 200; background: var(--ink); color: var(--ivory); padding: .75rem 1rem; border-radius: 10px; }
@@ -727,6 +725,9 @@
         <figure class="gal-item reveal"><img src="images/g4.jpg" alt="Біш фрізе з округлою стрижкою" loading="lazy"><figcaption><b>Біш&nbsp;фрізе</b><span>Породна&nbsp;стрижка</span></figcaption></figure>
         <figure class="gal-item reveal"><img src="images/g5.jpg" alt="Британський короткошерстий кіт" loading="lazy"><figcaption><b>Британський&nbsp;кіт</b><span>Видалення&nbsp;підшерстя</span></figcaption></figure>
         <figure class="gal-item reveal"><img src="images/g6.jpg" alt="Мініатюрний шнауцер після тримінгу" loading="lazy"><figcaption><b>Мініатюрний&nbsp;шнауцер</b><span>Тримінг</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g7.jpg" alt="Ши-тцу з акуратною гігієнічною стрижкою" loading="lazy"><figcaption><b>Ши-тцу</b><span>Гігієнічна&nbsp;стрижка</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g8.jpg" alt="Мейн-кун після вичісування та розплутування ковтунів" loading="lazy"><figcaption><b>Мейн-кун</b><span>Розплутування&nbsp;ковтунів</span></figcaption></figure>
+        <figure class="gal-item reveal"><img src="images/g9.jpg" alt="Білий самоїд після експрес-линьки" loading="lazy"><figcaption><b>Самоїд</b><span>Експрес-линька</span></figcaption></figure>
       </div>
       <p class="gal-hint" aria-hidden="true">Гортайте, щоб побачити більше <svg><use href="#i-arrow"/></svg></p>
     </div>
