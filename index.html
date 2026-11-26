@@ -269,10 +269,10 @@
 
   .svc-body .h3 { font-size: clamp(2rem, 1.6rem + 1.4vw, 2.75rem); letter-spacing: -0.025em; margin-bottom: var(--space-4); }
   .svc-body > p { color: var(--muted); max-width: 46ch; }
-  .svc-list { margin: var(--space-8) 0 var(--space-10); display: grid; grid-template-columns: 1fr; column-gap: var(--space-8); border-top: 1px solid var(--stone); }
-  .svc-list li { padding: .85rem 0; border-bottom: 1px solid var(--stone); font-size: .975rem; line-height: 1.45; color: var(--text); }
-  .svc-list .note { display: block; margin-top: .2rem; font-size: .85rem; color: var(--muted); }
-  @media (min-width: 1200px) { .svc-list { grid-template-columns: 1fr 1fr; } }
+  .svc-list { margin: var(--space-8) 0 var(--space-10); display: grid; gap: .85rem; }
+  .svc-list li { position: relative; padding-left: 2.1rem; font-size: 1rem; line-height: 1.5; color: var(--text); }
+  .svc-list li::before { content: ""; position: absolute; left: 0; top: .1rem; width: 1.35rem; height: 1.35rem; border-radius: 50%; background: var(--tiffany-mist) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F7A74' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 12.5 4 4 8-9'/%3E%3C/svg%3E") center / .8rem no-repeat; }
+  .svc-list .note { color: var(--muted); }
   @media (min-width: 960px) {
     .svc-row { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 1rem + 4vw, 6rem); }
     .svc-row.flip .svc-img { order: 2; }
@@ -524,6 +524,8 @@
     .glass, .form-card { padding: 1.25rem; }
     .step span, .aside-item span { font-size: .84rem; }
     .stat span { font-size: .8rem; }
+    .svc-list li { font-size: .94rem; padding-left: 1.85rem; }
+    .svc-list li::before { width: 1.2rem; height: 1.2rem; }
   }
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
@@ -675,7 +677,7 @@
               <li>Гігієнічний&nbsp;догляд</li>
               <li>Підстригання&nbsp;кігтів</li>
               <li>Очищення вушок та&nbsp;зони&nbsp;очей</li>
-              <li>Купання&nbsp;та&nbsp;сушіння<span class="note">за&nbsp;потреби, якщо кіт добре переносить процедуру</span></li>
+              <li>Купання та&nbsp;сушіння <span class="note">— за&nbsp;потреби, якщо кіт добре переносить</span></li>
             </ul>
             <a href="#booking" class="btn btn-primary" data-pet="cat">Записати кота <svg class="arrow"><use href="#i-arrow"/></svg></a>
           </div>
