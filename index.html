@@ -101,28 +101,39 @@
   .section-head .lead { margin-top: var(--space-4); }
 
   /* Buttons */
+  /* Buttons — fill sweeps in on hover (transform only), arrow nudges, press compresses */
   .btn {
-    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
-    min-height: 52px; padding: .85rem 1.75rem; border-radius: 999px; border: 1px solid transparent;
-    font-size: .9375rem; font-weight: 500; letter-spacing: .01em; cursor: pointer; white-space: nowrap;
-    transition: transform .45s var(--spring), background-color .25s ease, color .25s ease, border-color .25s ease;
+    --btn-bg: var(--teal); --btn-fg: var(--white); --btn-bd: transparent;
+    --btn-fill: var(--ink); --btn-fg-hover: var(--white); --btn-bd-hover: transparent;
+    position: relative; isolation: isolate; overflow: hidden;
+    display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+    min-height: 54px; padding: .9rem 1.85rem; border-radius: 999px;
+    border: 0; background: transparent; color: var(--btn-fg);
+    font-family: var(--sans); font-size: .95rem; font-weight: 500; letter-spacing: .01em; line-height: 1.2;
+    cursor: pointer; white-space: nowrap; text-decoration: none; -webkit-user-select: none; user-select: none;
+    transition: color .35s ease, border-color .35s ease, transform .5s var(--spring);
   }
-  .btn svg { width: 18px; height: 18px; flex: none; transition: transform .45s var(--spring); }
-  .btn:hover svg.arrow { transform: translateX(4px); }
-  .btn:hover { transform: translateY(-2px); }
-  .btn:active { transform: translateY(0) scale(.98); }
+  .btn::after { content: ""; position: absolute; inset: 0; z-index: -2; border-radius: inherit; background: var(--btn-bg); }
+  .btn::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; background: var(--btn-fill);
+    transform: scaleX(0); transform-origin: right center; transition: transform .6s var(--ease-out);
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; transition: transform .5s var(--spring); }
+  @media (hover: hover) {
+    .btn:hover { color: var(--btn-fg-hover); border-color: var(--btn-bd-hover); }
+    .btn:hover::before { transform: scaleX(1); transform-origin: left center; }
+    .btn:hover svg.arrow { transform: translateX(5px); }
+    .btn:hover svg:not(.arrow) { transform: rotate(-8deg) scale(1.08); }
+  }
+  .btn:active { transform: scale(.97); }
+  .btn:active::before { transform: scaleX(1); transform-origin: left center; }
+  .btn:active { color: var(--btn-fg-hover); }
   .btn:focus-visible, .focus-ring:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
-  .btn-primary { background: var(--teal); color: var(--white); }
-  .btn-primary:hover { background: var(--teal-hover); }
-  .btn-primary:active { background: var(--teal-deep); }
-  .btn-outline { border-color: rgba(23,48,46,.62); color: var(--ink); background: rgba(255,255,255,.35); }
-  .btn-outline:hover { border-color: var(--ink); background: rgba(255,255,255,.75); }
-  .btn-outline:active { background: var(--white); }
-  .btn-light { background: var(--ivory); color: var(--ink); }
-  .btn-light:hover { background: var(--white); }
-  .btn-light:active { background: var(--tiffany-soft); }
+  .btn-primary { --btn-bg: var(--teal); --btn-fg: var(--white); --btn-fill: var(--ink); --btn-fg-hover: var(--white); }
+  .btn-outline { border: 1.5px solid var(--btn-bd); --btn-bg: transparent; --btn-fg: var(--ink); --btn-bd: rgba(23,48,46,.62); --btn-fill: var(--ink); --btn-fg-hover: var(--ivory); --btn-bd-hover: var(--ink); }
+  .btn-light { --btn-bg: var(--ivory); --btn-fg: var(--ink); --btn-fill: var(--white); --btn-fg-hover: var(--ink); }
   .btn-light:focus-visible { outline-color: var(--tiffany); }
-  .btn-sm { min-height: 44px; padding: .6rem 1.25rem; font-size: .875rem; }
+  .btn-sm { min-height: 46px; padding: .65rem 1.3rem; font-size: .9rem; }
   .btn-block { width: 100%; }
 
   .link-u { position: relative; }
@@ -146,7 +157,9 @@
   .logo-sub { font-size: .66rem; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--teal); margin-top: .3rem; }
   .nav { display: none; gap: 2rem; }
   .nav a { font-size: .9rem; font-weight: 500; color: var(--ink); padding-block: .4rem; }
-  .header-cta { display: none; }
+  .header-cta { display: none; opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none; transition: opacity .35s ease, transform .5s var(--ease-out), visibility 0s linear .5s, color .35s ease, border-color .35s ease; }
+  .header.show-cta .header-cta { opacity: 1; transform: none; visibility: visible; pointer-events: auto; transition: opacity .35s ease, transform .5s var(--ease-out), visibility 0s, color .35s ease, border-color .35s ease; }
+  .header.show-cta .header-cta:active { transform: scale(.97); }
   .burger { width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(23,48,46,.6); background: rgba(255,255,255,.5); display: grid; place-items: center; cursor: pointer; transition: transform .4s var(--spring), background-color .2s ease; }
   .burger:hover { background: var(--white); }
   .burger:active { transform: scale(.94); }
@@ -240,9 +253,7 @@
   .band-dark .input:focus { outline: 2px solid var(--tiffany); outline-offset: 1px; border-color: var(--tiffany); }
   .band-dark select.input { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2381D8D0' stroke-width='1.5'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E"); }
   .band-dark select.input option { color: var(--text); }
-  .band-dark .btn-primary { background: var(--tiffany); color: var(--ink); }
-  .band-dark .btn-primary:hover { background: #95E0D9; }
-  .band-dark .btn-primary:active { background: #6CCBC2; }
+  .band-dark .btn-primary { --btn-bg: var(--tiffany); --btn-fg: var(--ink); --btn-fill: var(--ivory); --btn-fg-hover: var(--ink); }
   .band-dark .btn-primary:focus-visible { outline-color: var(--tiffany); }
   .form-grid { display: grid; gap: var(--space-4); }
   .js-booking { display: grid; gap: var(--space-4); }
@@ -492,8 +503,7 @@
   /* Floating booking button */
   .fab { border: 2px solid var(--ivory); position: fixed; z-index: 45; left: 50%; bottom: 1rem; transform: translate(-50%, 140%); opacity: 0; transition: transform .6s var(--spring), opacity .3s ease; }
   .fab.is-visible { transform: translate(-50%, 0); opacity: 1; }
-  .fab.is-visible:hover { transform: translate(-50%, -2px); }
-  .fab.is-visible:active { transform: translate(-50%, 0) scale(.98); }
+  .fab.is-visible:active { transform: translate(-50%, 0) scale(.97); }
 
   /* Reveal */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
@@ -1005,6 +1015,8 @@
     const inBooking = r.top < innerHeight && r.bottom > 0;
     fab.classList.toggle('is-visible', past && !inBooking && innerWidth < 1024);
   };
+  const heroCta = $('.hero-actions');
+  new IntersectionObserver(([e]) => header.classList.toggle('show-cta', !e.isIntersecting), { rootMargin: '-76px 0px 0px 0px' }).observe(heroCta);
   addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll); onScroll();
 
   // Mobile menu
