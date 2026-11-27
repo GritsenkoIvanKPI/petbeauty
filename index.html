@@ -356,6 +356,7 @@
   /* CTA */
   .cta { position: relative; overflow: hidden; background: var(--tiffany-mist); min-height: 460px; display: flex; align-items: center; }
   .cta-media { position: absolute; inset: 0; }
+  .cta-media picture { display: contents; }
   .cta-media img { width: 100%; height: 100%; object-fit: cover; object-position: 20% 50%; }
   .cta-media::before { content: ""; position: absolute; inset: 0; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .08; }
   .cta-media::after { content: ""; position: absolute; inset: 0;
@@ -366,8 +367,8 @@
   .cta-content .actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-8); }
   @media (max-width: 899px) {
     .cta { flex-direction: column; align-items: stretch; min-height: 0; }
-    .cta-media { position: relative; inset: auto; height: clamp(260px, 62vw, 460px); }
-    .cta-media img { object-position: 22% 45%; }
+    .cta-media { position: relative; inset: auto; height: min(75vw, 560px); }
+    .cta-media img { object-position: 50% 50%; }
     .cta-media::after { background: linear-gradient(0deg, var(--tiffany-mist) 0%, rgba(234,246,244,.5) 16%, rgba(234,246,244,0) 40%); }
     .cta-content { margin-top: 0; padding-top: var(--space-6); }
     .ben-icon { width: 52px; height: 52px; border-radius: 16px; margin-bottom: var(--space-3); }
@@ -769,7 +770,7 @@
 
   <!-- CTA -->
   <section class="cta" aria-labelledby="cta-title">
-    <div class="cta-media"><img src="images/cta.jpg" alt="Кокер-спанієль у піні під час купання" loading="lazy"></div>
+    <div class="cta-media"><picture><source media="(max-width: 899px)" srcset="images/cta-mobile.jpg"><img src="images/cta.jpg" alt="Кокер-спанієль у піні під час купання" loading="lazy"></picture></div>
     <div class="rail cta-content">
       <div class="cta-inner reveal">
         <h2 class="h2" id="cta-title">Здорова шерсть і&nbsp;гарний настрій</h2>
