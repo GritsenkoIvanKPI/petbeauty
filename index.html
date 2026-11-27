@@ -185,7 +185,7 @@
 
   /* Hero */
   .hero { position: relative; min-height: min(100svh, 920px); display: flex; align-items: flex-end; padding: calc(var(--header-h) + 2rem) 0 var(--space-10); overflow: hidden; background: var(--cream); }
-  .hero-media { position: absolute; inset: 0; }
+  .hero-media { position: absolute; inset: 0; overflow: hidden; }
   .hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 72% 50%; transform: scale(1.06); animation: heroZoom 2.4s var(--ease-out) forwards; }
   .hero-media::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .08; }
   .hero-media::after { content: ""; position: absolute; inset: 0; z-index: 2;
@@ -210,7 +210,7 @@
   @media (max-width: 899px) {
     .hero { flex-direction: column; align-items: stretch; min-height: 0; padding: 0 0 var(--space-12); background: var(--ivory); }
     .hero-media { position: relative; inset: auto; height: clamp(320px, 62vw, 520px); margin-bottom: calc(var(--space-8) * -1); }
-    .hero-media img { object-position: 68% 40%; }
+    .hero-media img { object-position: 68% 40%; transform: none; animation: none; }
     .hero-media::after { background: linear-gradient(0deg, var(--ivory) 0%, rgba(250,247,242,.6) 18%, rgba(250,247,242,0) 45%), linear-gradient(180deg, rgba(250,247,242,.7) 0%, rgba(250,247,242,0) 22%); }
   }
   @keyframes heroZoom { to { transform: scale(1); } }
@@ -275,7 +275,7 @@
   .svc-row { display: grid; gap: var(--space-8); align-items: center; }
   .svc-img { position: relative; overflow: hidden; border-radius: var(--radius-lg); aspect-ratio: 4 / 3; background: var(--stone); }
   .svc-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease-out); }
-  .svc-img:hover img { transform: scale(1.04); }
+  @media (hover: hover) and (min-width: 900px) { .svc-img:hover img { transform: scale(1.04); } }
   .img-treat::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--tiffany-soft); mix-blend-mode: multiply; opacity: .06; pointer-events: none; }
 
   .svc-body .h3 { font-size: clamp(2rem, 1.6rem + 1.4vw, 2.75rem); letter-spacing: -0.025em; margin-bottom: var(--space-4); }
@@ -311,7 +311,7 @@
   .gal-hint svg { width: 18px; height: 18px; color: var(--teal); }
   .gal-item { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 3 / 4; background: var(--stone); }
   .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.1s var(--ease-out); }
-  .gal-item:hover img { transform: scale(1.06); }
+  @media (hover: hover) and (min-width: 900px) { .gal-item:hover img { transform: scale(1.06); } }
   .gal-item figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: 1.1rem 1.2rem; color: var(--ivory); }
   .gal-item figcaption b { display: block; font-family: var(--serif); font-size: clamp(1.1rem, 1rem + .5vw, 1.45rem); font-weight: 600; line-height: 1.1; }
   .gal-item figcaption span { font-size: .78rem; letter-spacing: .04em; opacity: .85; }
@@ -397,7 +397,7 @@
   @media (min-width: 720px) { .exp-grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
   .exp-photo { position: relative; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); overflow: hidden; background: var(--stone); }
   .exp-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; transition: transform 1.1s var(--ease-out); }
-  .exp:hover .exp-photo img { transform: scale(1.05); }
+  @media (hover: hover) and (min-width: 900px) { .exp:hover .exp-photo img { transform: scale(1.05); } }
   .exp-role { border: 1px solid var(--stone); position: absolute; left: 1rem; bottom: 1rem; z-index: 2; padding: .45rem .8rem; border-radius: 999px; background: rgba(250,247,242,.92); backdrop-filter: blur(6px); font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-deep); }
   .exp-body { padding: var(--space-6) var(--space-2) 0; }
   .exp-body .h3 { margin-bottom: .35rem; }
