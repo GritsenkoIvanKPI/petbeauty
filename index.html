@@ -504,6 +504,15 @@
   .fab { border: 2px solid var(--ivory); position: fixed; z-index: 45; left: 50%; bottom: 1rem; transform: translate(-50%, 140%); opacity: 0; transition: transform .6s var(--spring), opacity .3s ease; }
   .fab.is-visible { transform: translate(-50%, 0); opacity: 1; }
   .fab.is-visible:active { transform: translate(-50%, 0) scale(.97); }
+  /* Mobile: every button spans the content column (grid gutters stay) */
+  @media (max-width: 699px) {
+    .btn { width: 100%; }
+    .hero-actions, .cta-content .actions { flex-direction: column; }
+    .svc-body .btn { display: flex; }
+    .fab { left: var(--gutter); right: var(--gutter); width: auto; transform: translateY(140%); }
+    .fab.is-visible { transform: none; }
+    .fab.is-visible:active { transform: scale(.98); }
+  }
 
   /* Reveal */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .9s var(--ease-out), transform .9s var(--ease-out); }
