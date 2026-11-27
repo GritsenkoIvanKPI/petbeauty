@@ -321,17 +321,18 @@
 
   /* Benefits */
   .benefits { background: var(--white); }
-  .ben-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
-  .ben { position: relative; overflow: hidden; isolation: isolate; display: flex; flex-direction: column; gap: var(--space-4); padding: clamp(1.75rem, 1.3rem + 1.4vw, 2.5rem); border-radius: var(--radius-lg); background: var(--ivory); border: 1px solid var(--stone); transition: transform .55s var(--spring); }
+  .ben-grid { display: grid; grid-template-columns: 1fr; column-gap: var(--space-4); row-gap: 0; }
+  .ben { position: relative; overflow: hidden; isolation: isolate; display: grid; grid-row: span 3; grid-template-rows: subgrid; row-gap: 0; align-content: start; margin-bottom: var(--space-4); padding: clamp(1.75rem, 1.4rem + 1vw, 2.25rem); border-radius: var(--radius-lg); background: var(--ivory); border: 1px solid var(--stone); transition: transform .55s var(--spring); }
   .ben:hover { transform: translateY(-6px); }
-  .ben-icon { width: 60px; height: 60px; flex: none; border-radius: 18px; display: grid; place-items: center; background: var(--tiffany-mist); color: var(--teal); margin-bottom: var(--space-8); transition: transform .55s var(--spring), background-color .3s ease, color .3s ease; }
+  .ben-icon { width: 60px; height: 60px; flex: none; border-radius: 18px; display: grid; place-items: center; background: var(--tiffany-mist); color: var(--teal); margin-bottom: var(--space-6); transition: transform .55s var(--spring), background-color .3s ease, color .3s ease; }
   .ben-icon svg { width: 28px; height: 28px; }
   .ben:hover .ben-icon { transform: rotate(-6deg) scale(1.06); background: var(--teal); color: var(--white); }
-  .ben .h3 { font-size: clamp(1.45rem, 1.3rem + .5vw, 1.75rem); margin-bottom: var(--space-3); }
-  .ben-text { margin-top: auto; }
+  .ben .h3 { font-size: clamp(1.45rem, 1.25rem + .45vw, 1.7rem); margin-bottom: var(--space-3); }
+  .ben-text { display: contents; }
+  .ben .h3, .ben p { align-self: start; }
   .ben p { color: var(--muted); font-size: .97rem; }
-  .ben-wide .h3 { font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.4rem); max-width: 20ch; }
-  .ben-wide p { max-width: 46ch; font-size: 1.02rem; }
+
+  .ben-wide p { max-width: 46ch; }
   .ben-mist { background: var(--tiffany-mist); border-color: var(--tiffany-soft); }
   .ben-mist::before { content: ""; position: absolute; z-index: -1; right: -60px; bottom: -80px; width: 280px; height: 280px; border-radius: 50%; background: radial-gradient(circle, rgba(129,216,208,.45), rgba(129,216,208,0) 70%); }
   .ben-mist .ben-icon { background: var(--white); }
@@ -345,7 +346,7 @@
   .ben-dark .ben-bg-icon { color: var(--tiffany); opacity: .08; }
   .ben:hover .ben-bg-icon { transform: rotate(-8deg) translateY(-6px); }
   @media (min-width: 700px) { .ben-grid { grid-template-columns: 1fr 1fr; } .ben-wide { grid-column: span 2; } }
-  @media (min-width: 1100px) { .ben-grid { grid-template-columns: repeat(4, 1fr); } .ben-wide { grid-column: span 2; } .ben-wide .ben-text { padding-right: 120px; } }
+  @media (min-width: 1200px) { .ben-grid { grid-template-columns: repeat(4, 1fr); } .ben-wide { grid-column: span 2; } .ben-wide .h3, .ben-wide p { padding-right: 120px; } .ben .h3 { font-size: clamp(1.4rem, 1.1rem + .4vw, 1.6rem); } }
   .stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); margin-top: var(--space-12); }
   @media (min-width: 900px) { .stats { grid-template-columns: repeat(4, 1fr); } }
   .stat { text-align: center; padding-top: var(--space-6); border-top: 1px solid var(--stone); }
@@ -369,7 +370,7 @@
     .cta-media img { object-position: 22% 45%; }
     .cta-media::after { background: linear-gradient(0deg, var(--tiffany-mist) 0%, rgba(234,246,244,.5) 16%, rgba(234,246,244,0) 40%); }
     .cta-content { margin-top: 0; padding-top: var(--space-6); }
-    .ben-icon { width: 52px; height: 52px; border-radius: 16px; margin-bottom: var(--space-2); }
+    .ben-icon { width: 52px; height: 52px; border-radius: 16px; margin-bottom: var(--space-3); }
     .ben-icon svg { width: 24px; height: 24px; }
   }
   @media (min-width: 900px) {
@@ -535,7 +536,6 @@
     .lead { font-size: 1rem; }
     .svc-body .h3 { font-size: 1.75rem; }
     .ben .h3 { font-size: 1.35rem; }
-    .ben-wide .h3 { font-size: 1.5rem; }
     .ben { padding: 1.4rem; }
     .rev { padding: 1.5rem; }
     .rev blockquote { font-size: 1.18rem; }
@@ -752,10 +752,10 @@
       </div>
       <div class="ben-grid stagger">
         <article class="ben ben-wide ben-mist reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-heart"/></svg></span><div class="ben-text"><h3 class="h3">Індивідуальний&nbsp;підхід і&nbsp;турбота</h3><p>Враховуємо характер, темперамент, вік та&nbsp;особливості кожного улюбленця. Наша мета&nbsp;— зробити кожну процедуру максимально комфортною та&nbsp;спокійною.</p></div><svg class="ben-bg-icon" aria-hidden="true"><use href="#i-heart"/></svg></article>
-        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-scissors"/></svg></span><div class="ben-text"><h3 class="h3">Професійний&nbsp;догляд</h3><p>Враховуємо породу, тип шерсті та&nbsp;ваші побажання&nbsp;— від&nbsp;стрижки до&nbsp;завершального&nbsp;укладання.</p></div></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-scissors"/></svg></span><div class="ben-text"><h3 class="h3">Професійний&nbsp;догляд</h3><p>Враховуємо породу, тип шерсті та&nbsp;ваші побажання&nbsp;— від&nbsp;стрижки до&nbsp;укладання.</p></div></article>
         <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-bottle"/></svg></span><div class="ben-text"><h3 class="h3">Якісна&nbsp;косметика</h3><p>Спеціалізовані засоби для&nbsp;шкіри та&nbsp;шерсті, підібрані під&nbsp;потреби саме вашого&nbsp;улюбленця.</p></div></article>
         <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-layers"/></svg></span><div class="ben-text"><h3 class="h3">Усе&nbsp;в&nbsp;одному&nbsp;місці</h3><p>Купання, стрижка, вичісування, кігті, лапки, очі й&nbsp;вушка&nbsp;— за&nbsp;один візит.</p></div></article>
-        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div class="ben-text"><h3 class="h3">Зручний&nbsp;<span class="nowrap">онлайн-запис</span></h3><p>Обирайте послугу, майстра та&nbsp;час без&nbsp;зайвих телефонних дзвінків.</p></div></article>
+        <article class="ben reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-cal"/></svg></span><div class="ben-text"><h3 class="h3"><span class="nowrap">Онлайн-запис</span> без&nbsp;дзвінків</h3><p>Обирайте послугу, майстра та&nbsp;зручний час&nbsp;— заявка займає хвилину.</p></div></article>
         <article class="ben ben-wide ben-dark reveal"><span class="ben-icon"><svg aria-hidden="true"><use href="#i-tag"/></svg></span><div class="ben-text"><h3 class="h3">Прозорі&nbsp;ціни</h3><p>Заздалегідь пояснюємо вартість процедур і&nbsp;погоджуємо всі додаткові послуги з&nbsp;власником тварини&nbsp;— жодних сюрпризів після&nbsp;візиту.</p></div><svg class="ben-bg-icon" aria-hidden="true"><use href="#i-tag"/></svg></article>
       </div>
       <div class="stats stagger">
