@@ -299,8 +299,9 @@
   .gal-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(.75rem, .5rem + 1vw, 1.5rem); position: relative; }
   @media (min-width: 900px) { .gal-grid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 699px) {
-    .gal-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: .85rem; margin-inline: calc(var(--gutter) * -1); padding: .25rem var(--gutter) 1.5rem; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .gal-grid { display: flex; overflow-x: auto; overflow-y: hidden; overscroll-behavior-x: contain; touch-action: pan-x pan-y; scroll-snap-type: x mandatory; gap: .85rem; margin-inline: calc(var(--gutter) * -1); padding: .25rem var(--gutter) 1.5rem; scroll-padding-inline: var(--gutter); scrollbar-width: none; -webkit-overflow-scrolling: touch; }
     .gal-grid::-webkit-scrollbar { display: none; }
+    .gal-grid > .reveal { opacity: 1; transform: none; transition: none; }
     .gal-item { flex: 0 0 min(74%, 300px); scroll-snap-align: start; }
     .gal-item figcaption { padding: 1rem 1.1rem; }
     .gal-item figcaption b { font-size: 1.25rem; }
